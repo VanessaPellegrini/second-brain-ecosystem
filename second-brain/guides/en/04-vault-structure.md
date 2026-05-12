@@ -26,6 +26,7 @@ graph TD
     Vault --> D[📁 daily]
     Vault --> T[📁 templates]
     Vault --> H[📄 home.md]
+    Vault -.-> AI[📁 raw/wiki/reportes<br/>optional for Librarian]
 
     P --> P1[launch-portfolio.md]
     P --> P2[📁 thesis-2026]
@@ -39,6 +40,40 @@ graph TD
 ```
 
 > 💡 The numbers (1-, 2-, 3-, 4-) keep folders in priority order in the file explorer.
+
+## Optional AI Layer: Librarian
+
+If you plan to use Librarian, add three extra folders at the vault root. They do not replace PARA: they live alongside it.
+
+```text
+vault/
+  1-projects/
+  2-areas/
+  3-resources/
+  4-archive/
+  daily/
+  inbox/
+  templates/
+  home.md
+
+  raw/        # curated sources for AI; Librarian reads them as source of truth
+  wiki/       # pages maintained by Librarian
+  reportes/   # reviewable diagnostics and proposals
+```
+
+Use `inbox/` for fast human capture. Move a source into `raw/` only when you want Librarian to process it. This separation acts as a consent boundary: not everything you capture automatically enters the AI layer.
+
+Inside `wiki/`, Librarian expects this structure:
+
+```text
+wiki/
+  index.md
+  log.md
+  conceptos/
+  entidades/
+  sources/
+  synthesis/
+```
 
 ## The Home Note
 

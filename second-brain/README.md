@@ -19,6 +19,8 @@ Follow in order for the best experience:
 | 07 | [Next Level with AI](./guides/en/07-next-level-with-ai.md) | Meet Librarian — your AI-powered knowledge agent |
 | 08 | [Agent Quick Start](./guides/agent/README.md) | Minimal read order and editing rules for AI agents |
 
+Starter Obsidian templates live in [`templates/`](./templates/).
+
 ## Who is this for?
 
 Beginners. No prior experience with note-taking apps, Obsidian, or knowledge management needed.

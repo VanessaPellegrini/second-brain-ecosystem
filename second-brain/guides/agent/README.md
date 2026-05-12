@@ -33,11 +33,32 @@ vault/
 └── home.md
 ```
 
+If the user wants Librarian compatibility, also create the optional AI layer:
+
+```
+vault/
+├── raw/
+├── wiki/
+│   ├── conceptos/
+│   ├── entidades/
+│   ├── sources/
+│   ├── synthesis/
+│   ├── index.md
+│   └── log.md
+└── reportes/
+```
+
+`inbox/` is for unsorted human capture. `raw/` is for curated sources the user explicitly wants Librarian to process.
+
 ### 2. Create Templates
 
 - **Daily note template** (`templates/daily-template.md`) — based on guide 06
 - **Weekly review template** (`templates/weekly-review.md`) — based on guide 06
 - **Source template** (`templates/source-template.md`) — for ingesting articles/notes
+- **Raw source template** (`templates/raw-source-template.md`) — optional, for sources moved into `raw/` for Librarian
+- **Wiki concept template** (`templates/wiki-concept-template.md`) — optional, documents Librarian concept page shape
+- **Wiki source template** (`templates/wiki-source-template.md`) — optional, documents Librarian source index shape
+- **Wiki synthesis template** (`templates/wiki-synthesis-template.md`) — optional, documents Librarian synthesis page shape
 
 ### 3. Configure Core Plugins
 
@@ -60,6 +81,7 @@ Create `inbox/` folder with a `_README.md` explaining it's for unsorted notes to
 
 - **Never delete or modify** existing notes
 - **Never install community plugins** — that's the user's decision (guide 05 lists recommendations)
+- **Never move `inbox/` content into `raw/` automatically** — `raw/` is explicit consent for AI processing
 - **Ask before overwriting** if a file already exists
 - **Use the user's language** — detect from context or ask
 - **Keep it minimal** — only create what's in the guides, nothing extra

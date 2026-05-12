@@ -18,6 +18,8 @@ Seguílas en orden para la mejor experiencia:
 | 06 | [Tu flujo de trabajo](./guides/es/06-workflow.md) | Framework CODE, revisiones semanales, hábitos diarios |
 | 07 | [Siguiente nivel con IA](./guides/es/07-next-level-with-ai.md) | Conocé Librarian — tu agente de conocimiento con IA |
 
+Los templates iniciales de Obsidian viven en [`templates/`](./templates/).
+
 ## ¿Para quién es?
 
 Principiantes. No necesitás experiencia previa con apps de notas, Obsidian o gestión de conocimiento.

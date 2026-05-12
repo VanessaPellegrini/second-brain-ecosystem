@@ -32,6 +32,8 @@ No intentes capturar todo. Capturá lo que **te resuena** — ideas que te hacen
 | Snippets de código | Directamente en una nota de proyecto |
 | Conversaciones | Escribir el insight después del chat |
 
+Si usás Librarian, `inbox/` sigue siendo para captura rápida. Durante la revisión semanal, mové a `raw/` solo las fuentes que querés que la IA lea y convierta en wiki. Ejemplos: artículos, highlights de libros, notas de podcasts, papers o transcripciones.
+
 **La regla de los 2 segundos:** Si te toma más de 2 segundos capturar algo, tu sistema es muy complicado. Arreglalo.
 
 ### 2. 🗂️ Organizar — Ponelo donde lo vas a encontrar
@@ -81,6 +83,7 @@ Reservá 30 minutos cada semana (domingo a la noche o lunes a la mañana):
 
 ### 1. Limpiar Inbox (10 min)
 - [ ] Mover todas las notas del inbox a su hogar en PARA
+- [ ] Mover fuentes valiosas para IA a raw/
 - [ ] Borrar notas que ya no son útiles
 
 ### 2. Revisar Proyectos (10 min)
@@ -131,6 +134,7 @@ flowchart TD
     subgraph Weekly[Todas las Semanas]
         WR[Revisión semanal]
         ORG[Organizar inbox]
+        RAW[Mover fuentes a raw/]
         REV[Revisar proyectos]
         PLAN[Planificar próxima semana]
     end
@@ -141,7 +145,7 @@ flowchart TD
     end
     DN --> CAP
     CAP --> WR
-    WR --> ORG --> REV --> PLAN
+    WR --> ORG --> RAW --> REV --> PLAN
     PLAN --> DN
     REV -.-> MR
     MR --> ARCH --> MOC

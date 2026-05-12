@@ -92,9 +92,23 @@ flowchart TD
 
 Artículos, PDFs, highlights de libros, notas de podcasts, transcripciones de reuniones — cualquier cosa de la que quieras aprender. Son **inmutables** — la IA las lee pero nunca las modifica. Esta es tu fuente de verdad.
 
+En el vault, esta capa vive en `raw/`. No es lo mismo que `inbox/`: `inbox/` es captura temporal humana; `raw/` es material curado que decidiste entregar a Librarian para procesamiento.
+
 ### Capa 2: La Wiki (El Trabajo de la IA)
 
 Un directorio de archivos markdown que la IA crea y mantiene. Páginas de conceptos, páginas de entidades, resúmenes, comparaciones, referencias cruzadas. La IA es dueña de esta capa enteramente. Crea páginas, las actualiza cuando llegan fuentes nuevas, y mantiene todo consistente.
+
+Librarian espera esta estructura mínima:
+
+```text
+wiki/
+  index.md
+  log.md
+  conceptos/
+  entidades/
+  sources/
+  synthesis/
+```
 
 **Vos la leés. La IA la escribe.**
 
@@ -156,9 +170,13 @@ Dos archivos especiales ayudan a navegar la wiki:
 
 Un catálogo de todo lo que hay en la wiki — cada página listada con un link, un resumen de una línea y metadatos. Organizado por categoría (conceptos, entidades, fuentes). La IA lo actualiza en cada ingesta.
 
+Ruta esperada: `wiki/index.md`.
+
 ### 📋 log.md
 
 Un registro cronológico de solo-agregado de qué pasó y cuándo — ingestas, consultas, pases de lint. Te da una timeline de la evolución de tu wiki.
+
+Ruta esperada: `wiki/log.md`.
 
 ```mermaid
 flowchart LR
@@ -233,7 +251,7 @@ Estas prácticas hacen que tu wiki funcione mejor con IA:
 | Tip | Por qué ayuda |
 |-----|---------------|
 | **Usá nombres de carpetas consistentes** | La IA navega tu estructura más confiablemente |
-| **Agregá una fuente a `raw/` antes de preguntar sobre ella** | Las fuentes crudas son la base inmutable |
+| **Mové una fuente de `inbox/` a `raw/` antes de pedir curaduría** | `raw/` marca consentimiento explícito para que Librarian la procese |
 | **Dejá que la IA lintee semanalmente** | Mantiene la wiki saludable sin tu esfuerzo |
 | **Guardá buenas Q&A como páginas de wiki** | Tus exploraciones se acumulan con el tiempo |
 | **Usá la vista de grafo de Obsidian** | Ve la forma de tu wiki — hubs, huérfanas, clusters |

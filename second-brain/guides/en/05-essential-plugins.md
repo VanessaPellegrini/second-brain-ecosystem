@@ -76,6 +76,8 @@ tags: [<% tp.file.tags() %>]
 - **Search for:** `templater-obsidian`
 - **Configure:** Set your templates folder to `templates/`
 
+This repo includes starter templates in [`second-brain/templates/`](../../templates/): daily note, weekly review, source note, `raw/` source, and base `wiki/` pages for Librarian.
+
 ### 6. 🏷️ Tag Wrangler
 
 Rename, merge, and manage tags directly from the tag pane. No more manually editing tags one note at a time.

@@ -92,9 +92,23 @@ flowchart TD
 
 Articles, PDFs, book highlights, podcast notes, meeting transcripts — anything you want to learn from. These are **immutable** — the AI reads them but never changes them. This is your source of truth.
 
+In the vault, this layer lives in `raw/`. It is not the same as `inbox/`: `inbox/` is temporary human capture; `raw/` is curated material you decided to hand to Librarian for processing.
+
 ### Layer 2: The Wiki (The AI's Work)
 
 A directory of markdown files that the AI creates and maintains. Concept pages, entity pages, summaries, comparisons, cross-references. The AI owns this layer entirely. It creates pages, updates them when new sources arrive, and keeps everything consistent.
+
+Librarian expects this minimal structure:
+
+```text
+wiki/
+  index.md
+  log.md
+  conceptos/
+  entidades/
+  sources/
+  synthesis/
+```
 
 **You read it. The AI writes it.**
 
@@ -156,9 +170,13 @@ Two special files help navigate the wiki:
 
 A catalog of everything in the wiki — each page listed with a link, a one-line summary, and metadata. Organized by category (concepts, entities, sources). The AI updates it on every ingest.
 
+Expected path: `wiki/index.md`.
+
 ### 📋 log.md
 
 An append-only chronological record of what happened and when — ingests, queries, lint passes. Gives you a timeline of your wiki's evolution.
+
+Expected path: `wiki/log.md`.
 
 ```mermaid
 flowchart LR
@@ -233,7 +251,7 @@ These practices make your wiki work better with AI:
 | Tip | Why it helps |
 |-----|-------------|
 | **Use consistent folder names** | AI navigates your structure more reliably |
-| **Add a source to `raw/` before asking about it** | Raw sources are the immutable foundation |
+| **Move a source from `inbox/` to `raw/` before asking for curation** | `raw/` marks explicit consent for Librarian to process it |
 | **Let the AI lint weekly** | Keeps the wiki healthy without your effort |
 | **Save good Q&A as wiki pages** | Your explorations compound over time |
 | **Use Obsidian's graph view** | See the shape of your wiki — hubs, orphans, clusters |

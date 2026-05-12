@@ -32,6 +32,8 @@ Don't try to capture everything. Capture what **resonates** — ideas that make 
 | Code snippets | Directly in a project note |
 | Conversations | Write down the insight after the chat |
 
+If you use Librarian, `inbox/` is still for quick capture. During weekly review, move only the sources you want AI to read into `raw/`. Examples: articles, book highlights, podcast notes, papers, or transcripts.
+
 **The 2-second rule:** If it takes more than 2 seconds to capture something, your system is too complicated. Fix it.
 
 ### 2. 🗂️ Organize — Put It Where You'll Find It
@@ -81,6 +83,7 @@ Set aside 30 minutes every week (Sunday evening or Monday morning):
 
 ### 1. Clean Inbox (10 min)
 - [ ] Move all inbox notes to their PARA home
+- [ ] Move valuable AI sources to raw/
 - [ ] Delete notes that aren't useful anymore
 
 ### 2. Review Projects (10 min)
@@ -131,6 +134,7 @@ flowchart TD
     subgraph Weekly[Every Week]
         WR[Weekly review]
         ORG[Organize inbox]
+        RAW[Move sources to raw/]
         REV[Review projects]
         PLAN[Plan next week]
     end
@@ -141,7 +145,7 @@ flowchart TD
     end
     DN --> CAP
     CAP --> WR
-    WR --> ORG --> REV --> PLAN
+    WR --> ORG --> RAW --> REV --> PLAN
     PLAN --> DN
     REV -.-> MR
     MR --> ARCH --> MOC

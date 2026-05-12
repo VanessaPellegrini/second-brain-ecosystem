@@ -26,6 +26,7 @@ graph TD
     Vault --> D[📁 daily]
     Vault --> T[📁 templates]
     Vault --> H[📄 home.md]
+    Vault -.-> AI[📁 raw/wiki/reportes<br/>opcional para Librarian]
 
     P --> P1[lanzamiento-portfolio.md]
     P --> P2[📁 tesis-2026]
@@ -39,6 +40,40 @@ graph TD
 ```
 
 > 💡 Los números (1-, 2-, 3-, 4-) mantienen las carpetas en orden de prioridad en el explorador de archivos.
+
+## Capa opcional para IA: Librarian
+
+Si vas a usar Librarian, agregá tres carpetas extra al nivel raíz del vault. No reemplazan PARA: viven al lado.
+
+```text
+vault/
+  1-proyectos/
+  2-areas/
+  3-recursos/
+  4-archivo/
+  daily/
+  inbox/
+  templates/
+  home.md
+
+  raw/        # fuentes curadas para IA; Librarian las lee como source of truth
+  wiki/       # páginas mantenidas por Librarian
+  reportes/   # diagnósticos y propuestas revisables
+```
+
+Usá `inbox/` para captura humana rápida. Mové a `raw/` solo las fuentes que querés que Librarian procese. Esa separación funciona como una frontera de consentimiento: no todo lo que capturás entra automáticamente a la capa de IA.
+
+Dentro de `wiki/`, Librarian espera esta estructura:
+
+```text
+wiki/
+  index.md
+  log.md
+  conceptos/
+  entidades/
+  sources/
+  synthesis/
+```
 
 ## La Nota Home
 
