@@ -219,12 +219,12 @@ flowchart LR
 ### Getting Started with Librarian
 
 1. Make sure your vault is organized (guides 01–06)
-2. Head to the **[Librarian documentation](../../librarian/)**
+2. Head to the **[Librarian documentation](../../../librarian/)**
 3. Follow the installation guide
 4. Let it scan your vault
 5. Start asking questions
 
-> ⚠️ Librarian is currently in development. Check the [librarian/](../../librarian/) folder for the latest status.
+> ⚠️ Librarian is currently in development. Check the [librarian/](../../../librarian/) folder for the latest status.
 
 ## Tips for an AI-Powered Vault
 
@@ -264,12 +264,12 @@ Want to understand the LLM Wiki pattern in its original form? Read [Karpathy's L
 ## Keep Going
 
 - ⭐ Star this repo if it helped you
-- 🐛 Found an issue? [Open one](../../issues)
-- 💬 Have questions? Start a [discussion](../../discussions)
+- 🐛 Found an issue? [Open one](../../../issues)
+- 💬 Have questions? Start a [discussion](../../../discussions)
 - 🌍 Want to help translate? PRs welcome!
 
 ---
 
 **Happy thinking.** 🧠
 
-[← 06 — Your Workflow](./06-workflow.md) · [Español](./07-next-level-with-ai.es.md) · [Back to top ↑](../../README.md)
+[← 06 — Your Workflow](./06-workflow.md) · [Español](../es/07-next-level-with-ai.md) · [Back to top ↑](../../../README.md)

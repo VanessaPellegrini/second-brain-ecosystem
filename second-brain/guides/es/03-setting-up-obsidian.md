@@ -139,7 +139,7 @@ Tu vault está configurado. Podés crear notas, linkearlas y encontrar cosas. Es
 
 Ahora hagámoslo poderoso.
 
-→ **[04 — Estructura del Vault](./04-vault-structure.es.md)**
+→ **[04 — Estructura del Vault](./04-vault-structure.md)**
 
 ---
 

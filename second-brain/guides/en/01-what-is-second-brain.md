@@ -86,4 +86,4 @@ Now that you know *what* a Second Brain is, let's get you set up.
 
 ---
 
-[← Back to guides](../../) · [Español](../es/01-what-is-second-brain.md)
+[← Back to guides](../README.md) · [Español](../es/01-what-is-second-brain.md)

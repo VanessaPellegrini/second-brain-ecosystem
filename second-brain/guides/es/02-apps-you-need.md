@@ -39,7 +39,7 @@ Extensión oficial del navegador para guardar páginas web, artículos y highlig
 
 ### ✅ Tasks (Plugin de Obsidian)
 
-Manejá tareas y to-dos dentro de tus notas. No es una app separada — es un plugin que instalás dentro de Obsidian. Lo cubrimos en [05 — Plugins esenciales](./05-essential-plugins.es.md).
+Manejá tareas y to-dos dentro de tus notas. No es una app separada — es un plugin que instalás dentro de Obsidian. Lo cubrimos en [05 — Plugins esenciales](./05-essential-plugins.md).
 
 ## Bueno tener (después)
 
@@ -75,7 +75,7 @@ Si no estás chocando con un problema, no necesitás una herramienta para resolv
 
 ## ¿Qué sigue?
 
-→ **[03 — Configurar Obsidian](./03-setting-up-obsidian.es.md)**
+→ **[03 — Configurar Obsidian](./03-setting-up-obsidian.md)**
 
 ---
 

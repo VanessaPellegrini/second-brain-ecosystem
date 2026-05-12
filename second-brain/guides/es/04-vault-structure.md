@@ -119,7 +119,7 @@ La estructura perfecta no existe. Empezá con PARA, ajustá sobre la marcha. Tu 
 
 ## ¿Qué sigue?
 
-→ **[05 — Plugins esenciales](./05-essential-plugins.es.md)**
+→ **[05 — Plugins esenciales](./05-essential-plugins.md)**
 
 ---
 

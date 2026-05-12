@@ -219,12 +219,12 @@ flowchart LR
 ### Empezando con Librarian
 
 1. Asegurate de que tu vault esté organizado (guías 01–06)
-2. Andá a la **[documentación de Librarian](../../librarian/)**
+2. Andá a la **[documentación de Librarian](../../../librarian/)**
 3. Seguí la guía de instalación
 4. Dejá que escanee tu vault
 5. Empezá a preguntar
 
-> ⚠️ Librarian está actualmente en desarrollo. Revisá la carpeta [librarian/](../../librarian/) para el estado actual.
+> ⚠️ Librarian está actualmente en desarrollo. Revisá la carpeta [librarian/](../../../librarian/) para el estado actual.
 
 ## Tips para un Vault con IA
 
@@ -264,12 +264,12 @@ Desde "¿qué es un Segundo Cerebro?" hasta "mi Segundo Cerebro tiene una wiki p
 ## Seguí Adelante
 
 - ⭐ Dale star a este repo si te sirvió
-- 🐛 ¿Encontraste un problema? [Abrí un issue](../../issues)
-- 💬 ¿Tenés preguntas? Empezá una [discusión](../../discussions)
+- 🐛 ¿Encontraste un problema? [Abrí un issue](../../../issues)
+- 💬 ¿Tenés preguntas? Empezá una [discusión](../../../discussions)
 - 🌍 ¿Querés ayudar a traducir? ¡Los PRs son bienvenidos!
 
 ---
 
 **Feliz pensamiento.** 🧠
 
-[← 06 — Tu flujo de trabajo](./06-workflow.es.md) · [English](./07-next-level-with-ai.md) · [Volver arriba ↑](../../README.es.md)
+[← 06 — Tu flujo de trabajo](./06-workflow.md) · [English](../en/07-next-level-with-ai.md) · [Volver arriba ↑](../../../README.es.md)

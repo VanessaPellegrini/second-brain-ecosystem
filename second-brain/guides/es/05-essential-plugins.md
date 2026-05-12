@@ -118,7 +118,7 @@ Empezá con el **Pack Inicial**. Agregá más solo cuando pienses "Ojalá pudier
 
 ## ¿Qué sigue?
 
-→ **[06 — Tu flujo de trabajo](./06-workflow.es.md)**
+→ **[06 — Tu flujo de trabajo](./06-workflow.md)**
 
 ---
 

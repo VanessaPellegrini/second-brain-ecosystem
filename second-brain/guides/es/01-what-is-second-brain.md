@@ -82,8 +82,8 @@ flowchart LR
 
 Ahora que sabés *qué* es un Segundo Cerebro, vamos a configurar todo.
 
-→ **[02 — Aplicaciones que vas a necesitar](./02-apps-you-need.es.md)**
+→ **[02 — Aplicaciones que vas a necesitar](./02-apps-you-need.md)**
 
 ---
 
-[← Volver a guías](../../) · [English](../en/01-what-is-second-brain.md)
+[← Volver a guías](../README.es.md) · [English](../en/01-what-is-second-brain.md)

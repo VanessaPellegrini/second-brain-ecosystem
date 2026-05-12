@@ -157,7 +157,7 @@ Empezá con las notas diarias. Agregá revisiones semanales cuando estés lista.
 
 ## ¿Qué sigue?
 
-→ **[07 — Siguiente nivel con IA](./07-next-level-with-ai.es.md)**
+→ **[07 — Siguiente nivel con IA](./07-next-level-with-ai.md)**
 
 ---
 
