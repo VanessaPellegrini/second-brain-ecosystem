@@ -135,7 +135,7 @@ If you enable Librarian, the three conceptual layers materialize as these folder
 | `inbox/` | Temporary human capture | You |
 | `raw/` | Sources approved for Librarian to read | You (explicit consent) |
 | `wiki/` | Structured knowledge | Librarian |
-| `reviews/` | Human-readable review/export surface | Librarian (you approve via CLI) |
+| `reviews/` | Human-readable review and export surface | Librarian (you approve via CLI) |
 | `reports/` | Vault diagnostics | Librarian |
 | `memory/` | Agent continuity across sessions | Librarian |
 | `configs/` | Explicit configuration rules | You |
@@ -248,7 +248,7 @@ flowchart LR
 
 ### Privacy First
 
-- Your notes stay on **your machine**
+- When using local providers like Ollama, notes remain local. Cloud providers may receive relevant note fragments depending on configuration.
 - Embeddings are generated **locally** when possible
 - No data is sent to third parties without your explicit consent
 - You own your knowledge — always

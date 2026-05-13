@@ -74,7 +74,7 @@ The relationship between folders:
 | `inbox/` | Temporary human capture | You |
 | `raw/` | Sources approved for Librarian to read | You (explicit consent) |
 | `wiki/` | Structured knowledge | Librarian |
-| `reviews/` | Proposals before touching the wiki | Librarian (you approve) |
+| `reviews/` | Human-readable review and export surface | Librarian (you approve via CLI) |
 | `reports/` | Vault diagnostics | Librarian |
 | `memory/` | Agent continuity across sessions | Librarian |
 | `configs/` | Explicit configuration rules | You |
@@ -94,7 +94,7 @@ wiki/
   synthesis/
 ```
 
-`reviews/` is a human-readable review/export surface. The proposal source of truth is `.librarian/proposals/`. Before modifying the wiki, Librarian generates proposals that you review, approve, and apply via the CLI. The wiki is only modified through approve/apply. This keeps you in full control of your knowledge.
+`reviews/` is a human-readable review and export surface. `.librarian/proposals/` is the internal proposal source of truth. Before modifying the wiki, Librarian generates proposals that you review, approve, and apply via the CLI. The wiki is only modified through approve/apply. This keeps you in full control of your knowledge.
 
 ## The Home Note
 
