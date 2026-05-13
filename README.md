@@ -1,6 +1,6 @@
 # 🧠 Second Brain Ecosystem
 
-A complete, beginner-friendly guide to building your own Second Brain — from zero to AI-powered knowledge management.
+A complete, beginner-friendly guide to building your own Second Brain — from zero to a reliable knowledge system, with an optional AI layer.
 
 > **¿Prefieres leer en español?** → [README.es.md](./README.es.md)
 
@@ -17,8 +17,8 @@ The concept was popularized by [Tiago Forte](https://fortelabs.com/) and his **B
 | Project | Description | Status |
 |---------|-------------|--------|
 | **[second-brain](./second-brain/)** | Step-by-step guide to set up your Second Brain from scratch using Obsidian | 🟢 In progress |
-| **[local-LLM](./local-LLM/)** | Guide to run a local model with Ollama for Librarian | 🟢 In progress |
-| **[librarian](https://github.com/Agents4Life/librarian)** | Separate open-source AI agent that reads, indexes, and enriches your Obsidian vault | 🟡 Experimental alpha |
+| **[local-LLM](./local-LLM/)** | Optional guide to run a local model with Ollama for Librarian | 🟢 In progress |
+| **[librarian](https://github.com/Agents4Life/librarian)** | Optional separate open-source AI agent that reads, indexes, and enriches your Obsidian vault | 🟡 Experimental alpha |
 
 ## Quick Start
 
@@ -32,13 +32,13 @@ Head to **[second-brain/](./second-brain/)** and follow the guides in order:
 4. **[Vault Structure](./second-brain/guides/en/04-vault-structure.md)** — How to organize your folders and notes
 5. **[Essential Plugins](./second-brain/guides/en/05-essential-plugins.md)** — Must-have community plugins
 6. **[Your Workflow](./second-brain/guides/en/06-workflow.md)** — Capture → Organize → Retrieve → Create
-7. **[Next Level with AI](./second-brain/guides/en/07-next-level-with-ai.md)** — Automate and enrich with Librarian
-8. **[Local LLM Setup](./local-LLM/README.md)** — Run Ollama locally for Librarian
-9. **[Agent Quick Start](./second-brain/guides/agent/README.md)** — Minimal read order and editing rules for agents
+7. **[Next Level with AI](./second-brain/guides/en/07-next-level-with-ai.md)** — Optional automation and enrichment with Librarian
+8. **[Local LLM Setup](./local-LLM/README.md)** — Optional local Ollama setup for Librarian
+9. **[Agent Quick Start](./second-brain/guides/agent/README.md)** — Optional minimal read order and editing rules for agents
 
 ### Already have a Second Brain?
 
-Jump straight to **[librarian](https://github.com/Agents4Life/librarian)** to supercharge your vault with AI.
+If you want AI assistance, try **[librarian](https://github.com/Agents4Life/librarian)** to add an optional agent layer to your vault.
 
 ## Philosophy
 
@@ -53,7 +53,7 @@ Jump straight to **[librarian](https://github.com/Agents4Life/librarian)** to su
 - ✍️ Writers and content creators
 - 📚 Students and lifelong learners
 - 🏢 Professionals managing lots of information
-- 🤖 Anyone curious about AI-powered knowledge management
+- 🤖 Anyone curious about optional AI-assisted knowledge management
 
 ## Contributing
 

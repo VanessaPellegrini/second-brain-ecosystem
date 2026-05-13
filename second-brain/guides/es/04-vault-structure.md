@@ -26,7 +26,7 @@ graph TD
     Vault --> D[📁 daily]
     Vault --> T[📁 templates]
     Vault --> H[📄 home.md]
-    Vault -.-> AI[📁 Capa Librarian<br/>raw · wiki · reports · reviews · memory · configs · .librarian]
+    Vault -. opcional .-> AI[📁 Capa Librarian<br/>raw · wiki · reports · reviews · memory · configs · .librarian]
 
     P --> P1[lanzamiento-portfolio.md]
     P --> P2[📁 tesis-2026]
@@ -41,11 +41,11 @@ graph TD
 
 > 💡 Los números (1-, 2-, 3-, 4-) mantienen las carpetas en orden de prioridad en el explorador de archivos.
 
-## Capa Operativa de IA: Librarian
+## Capa Operativa de IA Opcional: Librarian
 
 **PARA organiza tu vida y tus proyectos. Librarian organiza la capa de conocimiento procesable por IA.**
 
-Si vas a usar Librarian, agrega estas carpetas al nivel raíz del vault. No reemplazan PARA: viven al lado.
+Esta capa es opcional. Tu Segundo Cerebro funciona sin ella. Si vas a usar Librarian, agrega estas carpetas al nivel raíz del vault. No reemplazan PARA: viven al lado.
 
 ```text
 vault/

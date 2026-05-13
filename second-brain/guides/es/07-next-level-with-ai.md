@@ -1,6 +1,8 @@
 # Siguiente Nivel con IA
 
-Tu Segundo Cerebro está funcionando. Estás capturando, organizando y creando. Ahora hagámoslo *inteligente*.
+Tu Segundo Cerebro está funcionando. Estás capturando, organizando y creando. Si querés asistencia con IA, esta capa opcional puede hacerlo *más inteligente*.
+
+> Esta guía es opcional. La configuración base del Segundo Cerebro de las guías 01-06 funciona sin Librarian, LLMs locales ni ninguna capa de agente.
 
 ## El Problema
 
@@ -10,7 +12,7 @@ A medida que tu vault crece, vas a chocar con paredes:
 - **500 notas** — La búsqueda funciona, pero te perdés conexiones
 - **1,000+ notas** — Hay oro enterrado ahí que nunca vas a ver
 
-Acá es donde entra la IA. No para reemplazar tu pensamiento — para **augmentarlo**.
+Acá es donde la IA puede ayudar. No para reemplazar tu pensamiento — para **augmentarlo**.
 
 ## RAG vs. LLM Wiki
 
@@ -27,7 +29,7 @@ flowchart LR
     end
 ```
 
-Hay una mejor forma. Se llama el **patrón LLM Wiki**, y es la idea detrás de Librarian.
+Para quienes quieren un vault asistido por agente, hay una mejor forma. Se llama el **patrón LLM Wiki**, y es la idea detrás de Librarian.
 
 En vez de buscar documentos crudos en cada pregunta, la IA **construye y mantiene incrementalmente una wiki persistente** — una colección estructurada e interconectada de archivos markdown que se interpone entre vos y tus fuentes crudas.
 
@@ -55,9 +57,9 @@ Este concepto fue articulado por [Andrej Karpathy](https://gist.github.com/karpa
 
 ## Cómo Funciona: Las Tres Capas
 
-El patrón LLM Wiki tiene tres capas distintas dentro de tu vault:
+El patrón LLM Wiki opcional tiene tres capas distintas dentro de tu vault:
 
-> **PARA organiza tu vida y tus proyectos. Librarian organiza la capa de conocimiento procesable por IA.** No compiten — cooperan. Tu estructura PARA sigue intacta; Librarian agrega su propia capa operativa al lado.
+> **PARA organiza tu vida y tus proyectos. Librarian organiza opcionalmente la capa de conocimiento procesable por IA.** No compiten — cooperan. Tu estructura PARA sigue intacta; Librarian agrega su propia capa operativa al lado solo si elegís usarlo.
 
 ```mermaid
 flowchart TD
@@ -126,7 +128,7 @@ Tu trabajo es:
 
 ### Mapa Completo de Carpetas de Librarian
 
-Las tres capas conceptuales se materializan en estas carpetas dentro de tu vault:
+Si habilitás Librarian, las tres capas conceptuales se materializan en estas carpetas dentro de tu vault:
 
 | Carpeta | Rol | Quién escribe |
 |---------|-----|---------------|

@@ -1,6 +1,6 @@
 # 📝 Second Brain — Step-by-Step Guide
 
-A complete guide to building your personal Second Brain using Obsidian — from zero to AI-powered.
+A complete guide to building your personal Second Brain using Obsidian — from zero to a reliable, local knowledge system.
 
 > **¿Prefieres leer en español?** → [README.es.md](./README.es.md)
 
@@ -16,8 +16,8 @@ Follow in order for the best experience:
 | 04 | [Vault Structure](./guides/en/04-vault-structure.md) | PARA method, folders, naming conventions |
 | 05 | [Essential Plugins](./guides/en/05-essential-plugins.md) | 8 plugins that cover 90% of your needs |
 | 06 | [Your Workflow](./guides/en/06-workflow.md) | CODE framework, weekly reviews, daily habits |
-| 07 | [Next Level with AI](./guides/en/07-next-level-with-ai.md) | Meet Librarian — your AI-powered knowledge agent |
-| 08 | [Agent Quick Start](./guides/agent/README.md) | Minimal read order and editing rules for AI agents |
+| 07 | [Next Level with AI](./guides/en/07-next-level-with-ai.md) | Optional: meet Librarian, an AI-powered knowledge agent |
+| 08 | [Agent Quick Start](./guides/agent/README.md) | Optional: minimal read order and editing rules for AI agents |
 
 Starter Obsidian templates live in [`templates/`](./templates/).
 
@@ -25,7 +25,7 @@ Starter Obsidian templates live in [`templates/`](./templates/).
 
 Beginners. No prior experience with note-taking apps, Obsidian, or knowledge management needed.
 
-If you already have a Second Brain, jump to guide [07 — Next Level with AI](./guides/en/07-next-level-with-ai.md).
+If you already have a Second Brain and want AI assistance, jump to guide [07 — Next Level with AI](./guides/en/07-next-level-with-ai.md).
 
 ## Philosophy
 

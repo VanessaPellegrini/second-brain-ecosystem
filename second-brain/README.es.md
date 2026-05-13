@@ -1,6 +1,6 @@
 # 📝 Segundo Cerebro — Guía Paso a Paso
 
-Una guía completa para armar tu Segundo Cerebro personal usando Obsidian — desde cero hasta IA.
+Una guía completa para armar tu Segundo Cerebro personal usando Obsidian — desde cero hasta un sistema de conocimiento local y confiable.
 
 > **Prefer to read in English?** → [README.md](./README.md)
 
@@ -16,7 +16,7 @@ Seguílas en orden para la mejor experiencia:
 | 04 | [Estructura del Vault](./guides/es/04-vault-structure.md) | Método PARA, carpetas, convenciones de nombres |
 | 05 | [Plugins esenciales](./guides/es/05-essential-plugins.md) | 8 plugins que cubren el 90% de lo que necesitás |
 | 06 | [Tu flujo de trabajo](./guides/es/06-workflow.md) | Framework CODE, revisiones semanales, hábitos diarios |
-| 07 | [Siguiente nivel con IA](./guides/es/07-next-level-with-ai.md) | Conocé Librarian — tu agente de conocimiento con IA |
+| 07 | [Siguiente nivel con IA](./guides/es/07-next-level-with-ai.md) | Opcional: conocé Librarian, un agente de conocimiento con IA |
 
 Los templates iniciales de Obsidian viven en [`templates/`](./templates/).
 
@@ -24,7 +24,7 @@ Los templates iniciales de Obsidian viven en [`templates/`](./templates/).
 
 Principiantes. No necesitás experiencia previa con apps de notas, Obsidian o gestión de conocimiento.
 
-Si ya tenés un Segundo Cerebro, saltá a la guía [07 — Siguiente nivel con IA](./guides/es/07-next-level-with-ai.md).
+Si ya tenés un Segundo Cerebro y querés asistencia con IA, saltá a la guía [07 — Siguiente nivel con IA](./guides/es/07-next-level-with-ai.md).
 
 ## Filosofía
 

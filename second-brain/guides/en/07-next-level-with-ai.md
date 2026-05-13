@@ -1,6 +1,8 @@
 # Next Level with AI
 
-Your Second Brain is working. You're capturing, organizing, and creating. Now let's make it *smart*.
+Your Second Brain is working. You're capturing, organizing, and creating. If you want AI assistance, this optional layer can make it *smarter*.
+
+> This guide is optional. The core Second Brain setup from guides 01-06 works without Librarian, local LLMs, or any agent layer.
 
 ## The Problem
 
@@ -10,7 +12,7 @@ As your vault grows, you'll hit walls:
 - **500 notes** — Search works, but you miss connections
 - **1,000+ notes** — There's gold buried in there you'll never see
 
-This is where AI comes in. Not to replace your thinking — to **augment** it.
+This is where AI can help. Not to replace your thinking — to **augment** it.
 
 ## RAG vs. LLM Wiki
 
@@ -27,7 +29,7 @@ flowchart LR
     end
 ```
 
-There's a better way. It's called the **LLM Wiki pattern**, and it's the idea behind Librarian.
+For people who want an agent-assisted vault, there's a better way. It's called the **LLM Wiki pattern**, and it's the idea behind Librarian.
 
 Instead of searching raw documents on every question, the AI **incrementally builds and maintains a persistent wiki** — a structured, interlinked collection of markdown files that sits between you and your raw sources.
 
@@ -55,9 +57,9 @@ This concept was articulated by [Andrej Karpathy](https://gist.github.com/karpat
 
 ## How It Works: The Three Layers
 
-The LLM Wiki pattern has three distinct layers inside your vault:
+The optional LLM Wiki pattern has three distinct layers inside your vault:
 
-> **PARA organizes your life and projects. Librarian organizes the AI-processable knowledge layer.** They don't compete — they cooperate. Your PARA structure stays intact; Librarian adds its own operational layer alongside it.
+> **PARA organizes your life and projects. Librarian optionally organizes the AI-processable knowledge layer.** They don't compete — they cooperate. Your PARA structure stays intact; Librarian adds its own operational layer alongside it only if you choose to use it.
 
 ```mermaid
 flowchart TD
@@ -126,7 +128,7 @@ Your job is to:
 
 ### Complete Librarian Folder Map
 
-The three conceptual layers materialize as these folders inside your vault:
+If you enable Librarian, the three conceptual layers materialize as these folders inside your vault:
 
 | Folder | Role | Who writes |
 |--------|------|------------|

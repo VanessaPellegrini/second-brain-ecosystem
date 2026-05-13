@@ -2,6 +2,8 @@
 
 Build a Second Brain in Obsidian. Keep it simple, local, searchable, and link-based.
 
+The Librarian/AI agent layer is optional. Only create it when the user explicitly wants Librarian compatibility.
+
 ## Mission
 
 You are an agent that helps users set up a complete Second Brain inside their Obsidian vault. You configure the structure, install essential plugins, create templates, and verify everything works. You do not modify content the user has already created — you only scaffold.
@@ -111,7 +113,7 @@ After setup, print a summary:
 ✅ Second Brain scaffolded successfully
 
 Folders: 1-projects, 2-areas, 3-resources, 4-archive, daily, inbox, templates
-Librarian layer: raw, wiki, reports, reviews, memory, configs, .librarian
+Librarian layer: not created unless requested
 Templates: daily-template, weekly-review, source-template
 Home note: home.md (pinned)
 

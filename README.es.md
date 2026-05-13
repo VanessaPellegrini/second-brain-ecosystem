@@ -1,6 +1,6 @@
 # 🧠 Ecosistema Segundo Cerebro
 
-Una guía completa y para principiantes para armar tu propio Segundo Cerebro — desde cero hasta gestión del conocimiento con IA.
+Una guía completa y para principiantes para armar tu propio Segundo Cerebro — desde cero hasta un sistema de conocimiento confiable, con una capa de IA opcional.
 
 > **Prefer to read in English?** → [README.md](./README.md)
 
@@ -17,8 +17,8 @@ El concepto fue popularizado por [Tiago Forte](https://fortelabs.com/) y su meto
 | Proyecto | Descripción | Estado |
 |----------|-------------|--------|
 | **[second-brain](./second-brain/)** | Guía paso a paso para armar tu Segundo Cerebro desde cero usando Obsidian | 🟢 En progreso |
-| **[local-LLM](./local-LLM/README.es.md)** | Guía para correr un modelo local con Ollama para Librarian | 🟢 En progreso |
-| **[librarian](https://github.com/Agents4Life/librarian)** | Agente de IA open source separado que lee, indexa y enriquece tu vault de Obsidian | 🟡 Alpha experimental |
+| **[local-LLM](./local-LLM/README.es.md)** | Guía opcional para correr un modelo local con Ollama para Librarian | 🟢 En progreso |
+| **[librarian](https://github.com/Agents4Life/librarian)** | Agente de IA open source separado y opcional que lee, indexa y enriquece tu vault de Obsidian | 🟡 Alpha experimental |
 
 ## Empezá acá
 
@@ -32,12 +32,12 @@ Entrá en **[second-brain/](./second-brain/)** y seguí las guías en orden:
 4. **[Estructura del Vault](./second-brain/guides/es/04-vault-structure.md)** — Cómo organizar carpetas y notas
 5. **[Plugins esenciales](./second-brain/guides/es/05-essential-plugins.md)** — Plugins comunitarios imprescindibles
 6. **[Tu flujo de trabajo](./second-brain/guides/es/06-workflow.md)** — Capturar → Organizar → Recuperar → Crear
-7. **[Siguiente nivel con IA](./second-brain/guides/es/07-next-level-with-ai.md)** — Automatizar y enriquecer con Librarian
-8. **[Configurar un LLM local](./local-LLM/README.es.md)** — Correr Ollama localmente para Librarian
+7. **[Siguiente nivel con IA](./second-brain/guides/es/07-next-level-with-ai.md)** — Automatización y enriquecimiento opcionales con Librarian
+8. **[Configurar un LLM local](./local-LLM/README.es.md)** — Configuración local opcional de Ollama para Librarian
 
 ### ¿Ya tenés un Segundo Cerebro?
 
-Saltá directo a **[librarian](https://github.com/Agents4Life/librarian)** para potenciar tu vault con IA.
+Si querés asistencia con IA, probá **[librarian](https://github.com/Agents4Life/librarian)** para sumar una capa de agente opcional a tu vault.
 
 ## Filosofía
 
@@ -52,7 +52,7 @@ Saltá directo a **[librarian](https://github.com/Agents4Life/librarian)** para 
 - ✍️ Escritores y creadores de contenido
 - 📚 Estudiantes y aprendices permanentes
 - 🏢 Profesionales que manejan mucha información
-- 🤖 Cualquiera curioso sobre gestión del conocimiento con IA
+- 🤖 Cualquiera curioso sobre gestión del conocimiento con asistencia opcional de IA
 
 ## Contribuir
 

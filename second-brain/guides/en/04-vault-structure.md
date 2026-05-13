@@ -26,7 +26,7 @@ graph TD
     Vault --> D[📁 daily]
     Vault --> T[📁 templates]
     Vault --> H[📄 home.md]
-    Vault -.-> AI[📁 Librarian Layer<br/>raw · wiki · reports · reviews · memory · configs · .librarian]
+    Vault -. optional .-> AI[📁 Librarian Layer<br/>raw · wiki · reports · reviews · memory · configs · .librarian]
 
     P --> P1[launch-portfolio.md]
     P --> P2[📁 thesis-2026]
@@ -41,11 +41,11 @@ graph TD
 
 > 💡 The numbers (1-, 2-, 3-, 4-) keep folders in priority order in the file explorer.
 
-## AI Operational Layer: Librarian
+## Optional AI Operational Layer: Librarian
 
 **PARA organizes your life and projects. Librarian organizes the AI-processable knowledge layer.**
 
-If you plan to use Librarian, add these folders at the vault root. They do not replace PARA: they live alongside it.
+This layer is optional. Your Second Brain works without it. If you plan to use Librarian, add these folders at the vault root. They do not replace PARA: they live alongside it.
 
 ```text
 vault/
