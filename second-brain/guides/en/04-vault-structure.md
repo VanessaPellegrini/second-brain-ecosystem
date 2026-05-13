@@ -94,7 +94,7 @@ wiki/
   synthesis/
 ```
 
-`reviews/` is key: before modifying the wiki, Librarian drops proposals there for you to review, approve, edit, or reject. This keeps you in full control of your knowledge.
+`reviews/` is a human-readable review/export surface. The proposal source of truth is `.librarian/proposals/`. Before modifying the wiki, Librarian generates proposals that you review, approve, and apply via the CLI. The wiki is only modified through approve/apply. This keeps you in full control of your knowledge.
 
 ## The Home Note
 

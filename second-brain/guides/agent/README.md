@@ -57,11 +57,11 @@ vault/
 | `inbox/` | Temporary human capture | User |
 | `raw/` | Curated sources for Librarian to process | User (explicit consent) |
 | `wiki/` | Structured knowledge maintained by AI | Librarian |
-| `reviews/` | Proposals pending approval/rejection/editing | Librarian (user approves) |
+| `reviews/` | Human-readable review/export surface | Librarian (user approves via CLI) |
 | `reports/` | Vault diagnostics | Librarian |
 | `memory/` | Agent continuity across sessions | Librarian |
 | `configs/` | Explicit configuration rules | User |
-| `.librarian/` | Internal state, indexes, cache, locks | Librarian |
+| `.librarian/` | Internal state: indexes, proposals, cache, locks | Librarian |
 
 PARA organizes the user's life and projects. Librarian organizes the AI-processable knowledge layer. They live alongside each other.
 
@@ -97,7 +97,7 @@ Create `inbox/` folder with a `_README.md` explaining it's for unsorted notes to
 - **Never delete or modify** existing notes
 - **Never install community plugins** — that's the user's decision (guide 05 lists recommendations)
 - **Never move `inbox/` content into `raw/` automatically** — `raw/` is explicit consent for AI processing
-- **Never apply changes from `reviews/` automatically** — the user must approve, edit, or reject proposals before they reach the wiki
+- **Never apply changes automatically** — the user must approve via CLI (`librarian approve <id>` / `librarian apply <id>`) before changes reach the wiki. `.librarian/proposals/` is the proposal source of truth. `reviews/` is a human-readable export surface only.
 - **Ask before overwriting** if a file already exists
 - **Use the user's language** — detect from context or ask
 - **Keep it minimal** — only create what's in the guides, nothing extra

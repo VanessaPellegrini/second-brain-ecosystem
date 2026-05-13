@@ -17,7 +17,8 @@ The concept was popularized by [Tiago Forte](https://fortelabs.com/) and his **B
 | Project | Description | Status |
 |---------|-------------|--------|
 | **[second-brain](./second-brain/)** | Step-by-step guide to set up your Second Brain from scratch using Obsidian | 🟢 In progress |
-| **[librarian](./librarian/)** | AI agent that reads, indexes, and enriches your Obsidian vault | 🟡 Coming soon |
+| **[local-LLM](./local-LLM/)** | Guide to run a local model with Ollama for Librarian | 🟢 In progress |
+| **[librarian](https://github.com/Agents4Life/librarian)** | Separate open-source AI agent that reads, indexes, and enriches your Obsidian vault | 🟡 Experimental alpha |
 
 ## Quick Start
 
@@ -32,11 +33,12 @@ Head to **[second-brain/](./second-brain/)** and follow the guides in order:
 5. **[Essential Plugins](./second-brain/guides/en/05-essential-plugins.md)** — Must-have community plugins
 6. **[Your Workflow](./second-brain/guides/en/06-workflow.md)** — Capture → Organize → Retrieve → Create
 7. **[Next Level with AI](./second-brain/guides/en/07-next-level-with-ai.md)** — Automate and enrich with Librarian
-8. **[Agent Quick Start](./second-brain/guides/agent/README.md)** — Minimal read order and editing rules for agents
+8. **[Local LLM Setup](./local-LLM/README.md)** — Run Ollama locally for Librarian
+9. **[Agent Quick Start](./second-brain/guides/agent/README.md)** — Minimal read order and editing rules for agents
 
 ### Already have a Second Brain?
 
-Jump straight to **[librarian/](./librarian/)** to supercharge your vault with AI.
+Jump straight to **[librarian](https://github.com/Agents4Life/librarian)** to supercharge your vault with AI.
 
 ## Philosophy
 

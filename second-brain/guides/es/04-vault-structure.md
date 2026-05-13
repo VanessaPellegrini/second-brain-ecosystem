@@ -94,7 +94,7 @@ wiki/
   synthesis/
 ```
 
-`reviews/` es clave: antes de modificar la wiki, Librarian deja propuestas ahí para que las revises, apruebes, edites o rechaces. Así mantenés control total sobre tu conocimiento.
+`reviews/` es una superficie humana de revisión/export. La fuente de verdad de propuestas es `.librarian/proposals/`. Antes de modificar la wiki, Librarian genera propuestas que revisás, aprobás y aplicás vía CLI. La wiki solo se modifica vía approve/apply. Así mantenés control total sobre tu conocimiento.
 
 ## La Nota Home
 

@@ -133,11 +133,11 @@ Las tres capas conceptuales se materializan en estas carpetas dentro de tu vault
 | `inbox/` | Captura humana temporal | Vos |
 | `raw/` | Fuentes aprobadas para que Librarian lea | Vos (consentimiento explícito) |
 | `wiki/` | Conocimiento ya estructurado | Librarian |
-| `reviews/` | Propuestas antes de tocar la wiki | Librarian (vos aprobás) |
+| `reviews/` | Superficie humana de revisión/export | Librarian (vos aprobás vía CLI) |
 | `reports/` | Diagnósticos del vault | Librarian |
 | `memory/` | Continuidad del agente entre sesiones | Librarian |
 | `configs/` | Reglas explícitas de configuración | Vos |
-| `.librarian/` | Estado técnico interno (índices, cache, locks) | Librarian |
+| `.librarian/` | Estado interno: índices, propuestas, cache, locks | Librarian |
 
 ## Las Tres Operaciones
 

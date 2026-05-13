@@ -3,7 +3,7 @@ type: synthesis
 source:
 category: synthesis
 tags: []
-purim:
+librarian:
   processed: true
   status: review
 ---

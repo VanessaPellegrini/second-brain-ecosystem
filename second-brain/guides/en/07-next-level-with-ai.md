@@ -133,11 +133,11 @@ The three conceptual layers materialize as these folders inside your vault:
 | `inbox/` | Temporary human capture | You |
 | `raw/` | Sources approved for Librarian to read | You (explicit consent) |
 | `wiki/` | Structured knowledge | Librarian |
-| `reviews/` | Proposals before touching the wiki | Librarian (you approve) |
+| `reviews/` | Human-readable review/export surface | Librarian (you approve via CLI) |
 | `reports/` | Vault diagnostics | Librarian |
 | `memory/` | Agent continuity across sessions | Librarian |
 | `configs/` | Explicit configuration rules | You |
-| `.librarian/` | Internal technical state (indexes, cache, locks) | Librarian |
+| `.librarian/` | Internal state: indexes, proposals, cache, locks | Librarian |
 
 ## The Three Operations
 
