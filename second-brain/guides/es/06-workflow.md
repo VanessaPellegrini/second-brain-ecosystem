@@ -32,7 +32,7 @@ No intentes capturar todo. Capturá lo que **te resuena** — ideas que te hacen
 | Snippets de código | Directamente en una nota de proyecto |
 | Conversaciones | Escribir el insight después del chat |
 
-Si usás Librarian, `inbox/` sigue siendo para captura rápida. Durante la revisión semanal, mové a `raw/` solo las fuentes que querés que la IA lea y convierta en wiki. Ejemplos: artículos, highlights de libros, notas de podcasts, papers o transcripciones.
+Si usás Librarian, `inbox/` sigue siendo para captura rápida. Durante la revisión semanal, mové a `raw/` solo las fuentes que querés que la IA lea y convierta en wiki. También revisá las propuestas en `reviews/` y los diagnósticos en `reports/`. Ejemplos de fuentes: artículos, highlights de libros, notas de podcasts, papers o transcripciones.
 
 **La regla de los 2 segundos:** Si te toma más de 2 segundos capturar algo, tu sistema es muy complicado. Arreglalo.
 
@@ -81,17 +81,21 @@ Reservá 30 minutos cada semana (domingo a la noche o lunes a la mañana):
 ```markdown
 ## Template de Revisión Semanal
 
-### 1. Limpiar Inbox (10 min)
+### 1. Limpiar Inbox (8 min)
 - [ ] Mover todas las notas del inbox a su hogar en PARA
 - [ ] Mover fuentes valiosas para IA a raw/
 - [ ] Borrar notas que ya no son útiles
 
-### 2. Revisar Proyectos (10 min)
+### 2. Revisar Propuestas de Librarian (5 min)
+- [ ] Aprobar, editar o rechazar propuestas en reviews/
+- [ ] Revisar diagnósticos en reports/
+
+### 3. Revisar Proyectos (10 min)
 - [ ] Actualizar notas de proyectos activos
 - [ ] Mover proyectos completados al archivo
 - [ ] Crear notas de proyecto nuevas si hace falta
 
-### 3. Planificar Próxima Semana (10 min)
+### 4. Planificar Próxima Semana (7 min)
 - [ ] Revisar calendario y compromisos
 - [ ] Fijar 3 prioridades para la semana
 - [ ] Crear las notas diarias de la próxima semana
@@ -135,6 +139,7 @@ flowchart TD
         WR[Revisión semanal]
         ORG[Organizar inbox]
         RAW[Mover fuentes a raw/]
+        REVLIB[Aprobar propuestas en reviews/]
         REV[Revisar proyectos]
         PLAN[Planificar próxima semana]
     end
@@ -145,7 +150,7 @@ flowchart TD
     end
     DN --> CAP
     CAP --> WR
-    WR --> ORG --> RAW --> REV --> PLAN
+    WR --> ORG --> RAW --> REVLIB --> REV --> PLAN
     PLAN --> DN
     REV -.-> MR
     MR --> ARCH --> MOC

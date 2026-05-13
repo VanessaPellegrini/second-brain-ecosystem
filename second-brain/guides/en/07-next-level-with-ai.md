@@ -57,6 +57,8 @@ This concept was articulated by [Andrej Karpathy](https://gist.github.com/karpat
 
 The LLM Wiki pattern has three distinct layers inside your vault:
 
+> **PARA organizes your life and projects. Librarian organizes the AI-processable knowledge layer.** They don't compete — they cooperate. Your PARA structure stays intact; Librarian adds its own operational layer alongside it.
+
 ```mermaid
 flowchart TD
     subgraph Raw["📄 Layer 1: Raw Sources"]
@@ -121,6 +123,21 @@ Your job is to:
 - **Explore** — Ask questions, follow links, chase ideas
 - **Direct** — Tell the AI what to emphasize, what to dig into
 - **Think** — The AI handles bookkeeping so you can focus on thinking
+
+### Complete Librarian Folder Map
+
+The three conceptual layers materialize as these folders inside your vault:
+
+| Folder | Role | Who writes |
+|--------|------|------------|
+| `inbox/` | Temporary human capture | You |
+| `raw/` | Sources approved for Librarian to read | You (explicit consent) |
+| `wiki/` | Structured knowledge | Librarian |
+| `reviews/` | Proposals before touching the wiki | Librarian (you approve) |
+| `reports/` | Vault diagnostics | Librarian |
+| `memory/` | Agent continuity across sessions | Librarian |
+| `configs/` | Explicit configuration rules | You |
+| `.librarian/` | Internal technical state (indexes, cache, locks) | Librarian |
 
 ## The Three Operations
 
@@ -234,15 +251,18 @@ flowchart LR
 - No data is sent to third parties without your explicit consent
 - You own your knowledge — always
 
+For a local-first setup, follow the [Local LLM Setup](../../../local-LLM/README.md) guide before connecting Librarian to your vault.
+
 ### Getting Started with Librarian
 
 1. Make sure your vault is organized (guides 01–06)
-2. Head to the **[Librarian documentation](../../../librarian/)**
-3. Follow the installation guide
-4. Let it scan your vault
-5. Start asking questions
+2. Configure a local model with **[Local LLM Setup](../../../local-LLM/README.md)**
+3. Head to the **[Librarian repository](https://github.com/Agents4Life/librarian)**
+4. Follow the installation guide
+5. Let it scan your vault
+6. Start asking questions
 
-> ⚠️ Librarian is currently in development. Check the [librarian/](../../../librarian/) folder for the latest status.
+> ⚠️ Librarian is currently in development as a separate repository. Check [github.com/Agents4Life/librarian](https://github.com/Agents4Life/librarian) for the latest status.
 
 ## Tips for an AI-Powered Vault
 

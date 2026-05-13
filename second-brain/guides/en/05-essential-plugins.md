@@ -76,7 +76,7 @@ tags: [<% tp.file.tags() %>]
 - **Search for:** `templater-obsidian`
 - **Configure:** Set your templates folder to `templates/`
 
-This repo includes starter templates in [`second-brain/templates/`](../../templates/): daily note, weekly review, source note, `raw/` source, and base `wiki/` pages for Librarian.
+This repo includes starter templates in [`second-brain/templates/`](../../templates/): daily note, weekly review, source note, `raw/` source, base `wiki/` pages for Librarian, and templates for `reviews/` and `reports/`.
 
 ### 6. 🏷️ Tag Wrangler
 

@@ -57,6 +57,8 @@ Este concepto fue articulado por [Andrej Karpathy](https://gist.github.com/karpa
 
 El patrón LLM Wiki tiene tres capas distintas dentro de tu vault:
 
+> **PARA organiza tu vida y tus proyectos. Librarian organiza la capa de conocimiento procesable por IA.** No compiten — cooperan. Tu estructura PARA sigue intacta; Librarian agrega su propia capa operativa al lado.
+
 ```mermaid
 flowchart TD
     subgraph Raw["📄 Capa 1: Fuentes Crudas"]
@@ -121,6 +123,21 @@ Tu trabajo es:
 - **Explorar** — Hacer preguntas, seguir links, perseguir ideas
 - **Dirigir** — Decirle a la IA qué enfatizar, en qué profundizar
 - **Pensar** — La IA maneja el bookkeeping para que te puedas concentrar en pensar
+
+### Mapa Completo de Carpetas de Librarian
+
+Las tres capas conceptuales se materializan en estas carpetas dentro de tu vault:
+
+| Carpeta | Rol | Quién escribe |
+|---------|-----|---------------|
+| `inbox/` | Captura humana temporal | Vos |
+| `raw/` | Fuentes aprobadas para que Librarian lea | Vos (consentimiento explícito) |
+| `wiki/` | Conocimiento ya estructurado | Librarian |
+| `reviews/` | Propuestas antes de tocar la wiki | Librarian (vos aprobás) |
+| `reports/` | Diagnósticos del vault | Librarian |
+| `memory/` | Continuidad del agente entre sesiones | Librarian |
+| `configs/` | Reglas explícitas de configuración | Vos |
+| `.librarian/` | Estado técnico interno (índices, cache, locks) | Librarian |
 
 ## Las Tres Operaciones
 
@@ -234,15 +251,18 @@ flowchart LR
 - No se envían datos a terceros sin tu consentimiento explícito
 - Tu conocimiento es tuyo — siempre
 
+Para una configuración local-first, seguí la guía [Configurar un LLM local](../../../local-LLM/README.es.md) antes de conectar Librarian a tu vault.
+
 ### Empezando con Librarian
 
 1. Asegurate de que tu vault esté organizado (guías 01–06)
-2. Andá a la **[documentación de Librarian](../../../librarian/)**
-3. Seguí la guía de instalación
-4. Dejá que escanee tu vault
-5. Empezá a preguntar
+2. Configurá un modelo local con **[Configurar un LLM local](../../../local-LLM/README.es.md)**
+3. Andá al **[repositorio de Librarian](https://github.com/Agents4Life/librarian)**
+4. Seguí la guía de instalación
+5. Dejá que escanee tu vault
+6. Empezá a preguntar
 
-> ⚠️ Librarian está actualmente en desarrollo. Revisá la carpeta [librarian/](../../../librarian/) para el estado actual.
+> ⚠️ Librarian está actualmente en desarrollo como repositorio separado. Revisá [github.com/Agents4Life/librarian](https://github.com/Agents4Life/librarian) para el estado actual.
 
 ## Tips para un Vault con IA
 

@@ -33,7 +33,7 @@ vault/
 └── home.md
 ```
 
-If the user wants Librarian compatibility, also create the optional AI layer:
+If the user wants Librarian compatibility, also create the AI operational layer:
 
 ```
 vault/
@@ -45,10 +45,25 @@ vault/
 │   ├── synthesis/
 │   ├── index.md
 │   └── log.md
-└── reportes/
+├── reports/
+├── reviews/
+├── memory/
+├── configs/
+└── .librarian/
 ```
 
-`inbox/` is for unsorted human capture. `raw/` is for curated sources the user explicitly wants Librarian to process.
+| Folder | Role | Who writes |
+|--------|------|------------|
+| `inbox/` | Temporary human capture | User |
+| `raw/` | Curated sources for Librarian to process | User (explicit consent) |
+| `wiki/` | Structured knowledge maintained by AI | Librarian |
+| `reviews/` | Proposals pending approval/rejection/editing | Librarian (user approves) |
+| `reports/` | Vault diagnostics | Librarian |
+| `memory/` | Agent continuity across sessions | Librarian |
+| `configs/` | Explicit configuration rules | User |
+| `.librarian/` | Internal state, indexes, cache, locks | Librarian |
+
+PARA organizes the user's life and projects. Librarian organizes the AI-processable knowledge layer. They live alongside each other.
 
 ### 2. Create Templates
 
@@ -82,6 +97,7 @@ Create `inbox/` folder with a `_README.md` explaining it's for unsorted notes to
 - **Never delete or modify** existing notes
 - **Never install community plugins** — that's the user's decision (guide 05 lists recommendations)
 - **Never move `inbox/` content into `raw/` automatically** — `raw/` is explicit consent for AI processing
+- **Never apply changes from `reviews/` automatically** — the user must approve, edit, or reject proposals before they reach the wiki
 - **Ask before overwriting** if a file already exists
 - **Use the user's language** — detect from context or ask
 - **Keep it minimal** — only create what's in the guides, nothing extra
@@ -95,6 +111,7 @@ After setup, print a summary:
 ✅ Second Brain scaffolded successfully
 
 Folders: 1-projects, 2-areas, 3-resources, 4-archive, daily, inbox, templates
+Librarian layer: raw, wiki, reports, reviews, memory, configs, .librarian
 Templates: daily-template, weekly-review, source-template
 Home note: home.md (pinned)
 

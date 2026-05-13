@@ -26,7 +26,7 @@ graph TD
     Vault --> D[📁 daily]
     Vault --> T[📁 templates]
     Vault --> H[📄 home.md]
-    Vault -.-> AI[📁 raw/wiki/reportes<br/>optional for Librarian]
+    Vault -.-> AI[📁 Librarian Layer<br/>raw · wiki · reports · reviews · memory · configs · .librarian]
 
     P --> P1[launch-portfolio.md]
     P --> P2[📁 thesis-2026]
@@ -41,9 +41,11 @@ graph TD
 
 > 💡 The numbers (1-, 2-, 3-, 4-) keep folders in priority order in the file explorer.
 
-## Optional AI Layer: Librarian
+## AI Operational Layer: Librarian
 
-If you plan to use Librarian, add three extra folders at the vault root. They do not replace PARA: they live alongside it.
+**PARA organizes your life and projects. Librarian organizes the AI-processable knowledge layer.**
+
+If you plan to use Librarian, add these folders at the vault root. They do not replace PARA: they live alongside it.
 
 ```text
 vault/
@@ -56,10 +58,27 @@ vault/
   templates/
   home.md
 
-  raw/        # curated sources for AI; Librarian reads them as source of truth
-  wiki/       # pages maintained by Librarian
-  reportes/   # reviewable diagnostics and proposals
+  raw/          # immutable sources approved for AI
+  wiki/         # structured knowledge generated/curated by Librarian
+  reports/      # automatic vault diagnostics
+  reviews/      # proposals pending approval/rejection/editing
+  memory/       # persistent agent/session memory
+  configs/      # visible/editable Librarian configuration
+  .librarian/   # internal state, indexes, cache, locks
 ```
+
+The relationship between folders:
+
+| Folder | Role | Who writes |
+|--------|------|------------|
+| `inbox/` | Temporary human capture | You |
+| `raw/` | Sources approved for Librarian to read | You (explicit consent) |
+| `wiki/` | Structured knowledge | Librarian |
+| `reviews/` | Proposals before touching the wiki | Librarian (you approve) |
+| `reports/` | Vault diagnostics | Librarian |
+| `memory/` | Agent continuity across sessions | Librarian |
+| `configs/` | Explicit configuration rules | You |
+| `.librarian/` | Internal technical state | Librarian |
 
 Use `inbox/` for fast human capture. Move a source into `raw/` only when you want Librarian to process it. This separation acts as a consent boundary: not everything you capture automatically enters the AI layer.
 
@@ -74,6 +93,8 @@ wiki/
   sources/
   synthesis/
 ```
+
+`reviews/` is key: before modifying the wiki, Librarian drops proposals there for you to review, approve, edit, or reject. This keeps you in full control of your knowledge.
 
 ## The Home Note
 

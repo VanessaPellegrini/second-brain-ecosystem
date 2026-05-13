@@ -26,7 +26,7 @@ graph TD
     Vault --> D[📁 daily]
     Vault --> T[📁 templates]
     Vault --> H[📄 home.md]
-    Vault -.-> AI[📁 raw/wiki/reportes<br/>opcional para Librarian]
+    Vault -.-> AI[📁 Capa Librarian<br/>raw · wiki · reports · reviews · memory · configs · .librarian]
 
     P --> P1[lanzamiento-portfolio.md]
     P --> P2[📁 tesis-2026]
@@ -41,9 +41,11 @@ graph TD
 
 > 💡 Los números (1-, 2-, 3-, 4-) mantienen las carpetas en orden de prioridad en el explorador de archivos.
 
-## Capa opcional para IA: Librarian
+## Capa Operativa de IA: Librarian
 
-Si vas a usar Librarian, agregá tres carpetas extra al nivel raíz del vault. No reemplazan PARA: viven al lado.
+**PARA organiza tu vida y tus proyectos. Librarian organiza la capa de conocimiento procesable por IA.**
+
+Si vas a usar Librarian, agrega estas carpetas al nivel raíz del vault. No reemplazan PARA: viven al lado.
 
 ```text
 vault/
@@ -56,10 +58,27 @@ vault/
   templates/
   home.md
 
-  raw/        # fuentes curadas para IA; Librarian las lee como source of truth
-  wiki/       # páginas mantenidas por Librarian
-  reportes/   # diagnósticos y propuestas revisables
+  raw/          # fuentes inmutables aprobadas para IA
+  wiki/         # conocimiento estructurado generado/curado por Librarian
+  reports/      # diagnósticos automáticos del vault
+  reviews/      # propuestas pendientes de aprobar/rechazar/editar
+  memory/       # memoria persistente del agente/sesiones
+  configs/      # configuración visible/editable de Librarian
+  .librarian/   # estado interno, índices, cache, locks
 ```
+
+La relación entre carpetas:
+
+| Carpeta | Rol | Quién escribe |
+|---------|-----|---------------|
+| `inbox/` | Captura humana temporal | Vos |
+| `raw/` | Fuentes aprobadas para que Librarian lea | Vos (consentimiento explícito) |
+| `wiki/` | Conocimiento ya estructurado | Librarian |
+| `reviews/` | Propuestas antes de tocar la wiki | Librarian (vos aprobás) |
+| `reports/` | Diagnósticos del vault | Librarian |
+| `memory/` | Continuidad del agente entre sesiones | Librarian |
+| `configs/` | Reglas explícitas de configuración | Vos |
+| `.librarian/` | Estado técnico interno | Librarian |
 
 Usá `inbox/` para captura humana rápida. Mové a `raw/` solo las fuentes que querés que Librarian procese. Esa separación funciona como una frontera de consentimiento: no todo lo que capturás entra automáticamente a la capa de IA.
 
@@ -74,6 +93,8 @@ wiki/
   sources/
   synthesis/
 ```
+
+`reviews/` es clave: antes de modificar la wiki, Librarian deja propuestas ahí para que las revises, apruebes, edites o rechaces. Así mantenés control total sobre tu conocimiento.
 
 ## La Nota Home
 
