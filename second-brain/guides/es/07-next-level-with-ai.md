@@ -135,7 +135,7 @@ Si habilitás Librarian, las tres capas conceptuales se materializan en estas ca
 | `inbox/` | Captura humana temporal | Vos |
 | `raw/` | Fuentes aprobadas para que Librarian lea | Vos (consentimiento explícito) |
 | `wiki/` | Conocimiento ya estructurado | Librarian |
-| `reviews/` | Superficie humana de revisión/export | Librarian (vos aprobás vía CLI) |
+| `reviews/` | Superficie humana de revisión y export | Librarian (vos aprobás vía CLI) |
 | `reports/` | Diagnósticos del vault | Librarian |
 | `memory/` | Continuidad del agente entre sesiones | Librarian |
 | `configs/` | Reglas explícitas de configuración | Vos |
@@ -248,7 +248,7 @@ flowchart LR
 
 ### Privacidad Primero
 
-- Tus notas se quedan en **tu máquina**
+- Cuando usás proveedores locales como Ollama, las notas se quedan locales. Los proveedores cloud pueden recibir fragmentos relevantes según la configuración.
 - Los embeddings se generan **localmente** cuando es posible
 - No se envían datos a terceros sin tu consentimiento explícito
 - Tu conocimiento es tuyo — siempre

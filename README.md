@@ -18,7 +18,7 @@ The concept was popularized by [Tiago Forte](https://fortelabs.com/) and his **B
 |---------|-------------|--------|
 | **[second-brain](./second-brain/)** | Step-by-step guide to set up your Second Brain from scratch using Obsidian | 🟢 In progress |
 | **[local-LLM](./local-LLM/)** | Optional guide to run a local model with Ollama for Librarian | 🟢 In progress |
-| **[librarian](https://github.com/Agents4Life/librarian)** | Optional separate open-source AI agent that reads, indexes, and enriches your Obsidian vault | 🟡 Experimental alpha |
+| **[librarian](https://github.com/Agents4Life/librarian)** | Optional separate open-source review-driven knowledge maintenance pipeline for Obsidian vaults | 🟡 Experimental alpha |
 
 ## Quick Start
 
@@ -45,7 +45,7 @@ If you want AI assistance, try **[librarian](https://github.com/Agents4Life/libr
 - **Start simple** — You don't need 50 plugins on day one
 - **Build habits first** — The system only works if you use it consistently
 - **Iterate** — Your Second Brain evolves with you
-- **Own your data** — Everything lives in plain Markdown files on your machine
+- **Own your data** — Everything lives in plain Markdown files on your machine (when using local providers like Ollama, notes remain local; cloud providers may receive relevant note fragments depending on configuration)
 
 ## Who is this for?
 
@@ -58,6 +58,24 @@ If you want AI assistance, try **[librarian](https://github.com/Agents4Life/libr
 ## Contributing
 
 This project is in early stages. Contributions, suggestions, and translations are welcome!
+
+## Current Reality
+
+Librarian is currently:
+- review-driven — all changes require human approval via CLI
+- manually triggered — no automatic or background processes
+- proposal-based — mutations go through a propose → review → approve → apply cycle
+- experimental alpha software
+
+## Future Direction
+
+Planned capabilities include:
+- incremental indexing
+- filesystem watchers
+- autonomous maintenance loops
+- recovery and reconciliation systems
+
+These are not implemented yet. Documentation describes current behavior unless explicitly marked as planned.
 
 ## License
 

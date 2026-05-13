@@ -59,7 +59,7 @@ vault/
 | `inbox/` | Temporary human capture | User |
 | `raw/` | Curated sources for Librarian to process | User (explicit consent) |
 | `wiki/` | Structured knowledge maintained by AI | Librarian |
-| `reviews/` | Human-readable review/export surface | Librarian (user approves via CLI) |
+| `reviews/` | Human-readable review and export surface | Librarian (user approves via CLI) |
 | `reports/` | Vault diagnostics | Librarian |
 | `memory/` | Agent continuity across sessions | Librarian |
 | `configs/` | Explicit configuration rules | User |
@@ -99,7 +99,7 @@ Create `inbox/` folder with a `_README.md` explaining it's for unsorted notes to
 - **Never delete or modify** existing notes
 - **Never install community plugins** — that's the user's decision (guide 05 lists recommendations)
 - **Never move `inbox/` content into `raw/` automatically** — `raw/` is explicit consent for AI processing
-- **Never apply changes automatically** — the user must approve via CLI (`librarian approve <id>` / `librarian apply <id>`) before changes reach the wiki. `.librarian/proposals/` is the proposal source of truth. `reviews/` is a human-readable export surface only.
+- **Never apply changes automatically** — the user must approve via CLI (`librarian approve <id>` / `librarian apply <id>`) before changes reach the wiki. `reviews/` is a human-readable review and export surface. `.librarian/proposals/` is the internal proposal source of truth.
 - **Ask before overwriting** if a file already exists
 - **Use the user's language** — detect from context or ask
 - **Keep it minimal** — only create what's in the guides, nothing extra

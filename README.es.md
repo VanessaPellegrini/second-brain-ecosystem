@@ -18,7 +18,7 @@ El concepto fue popularizado por [Tiago Forte](https://fortelabs.com/) y su meto
 |----------|-------------|--------|
 | **[second-brain](./second-brain/)** | Guía paso a paso para armar tu Segundo Cerebro desde cero usando Obsidian | 🟢 En progreso |
 | **[local-LLM](./local-LLM/README.es.md)** | Guía opcional para correr un modelo local con Ollama para Librarian | 🟢 En progreso |
-| **[librarian](https://github.com/Agents4Life/librarian)** | Agente de IA open source separado y opcional que lee, indexa y enriquece tu vault de Obsidian | 🟡 Alpha experimental |
+| **[librarian](https://github.com/Agents4Life/librarian)** | Pipeline de mantenimiento de conocimiento review-driven, separado y opcional, para vaults de Obsidian | 🟡 Alpha experimental |
 
 ## Empezá acá
 
@@ -44,7 +44,7 @@ Si querés asistencia con IA, probá **[librarian](https://github.com/Agents4Lif
 - **Empezá simple** — No necesitás 50 plugins el primer día
 - **Primero los hábitos** — El sistema solo funciona si lo usás consistentemente
 - **Iterá** — Tu Segundo Cerebro evoluciona con vos
-- **Tus datos son tuyos** — Todo vive en archivos Markdown en tu máquina
+- **Tus datos son tuyos** — Todo vive en archivos Markdown en tu máquina (cuando usás proveedores locales como Ollama, las notas se quedan locales; los proveedores cloud pueden recibir fragmentos relevantes según la configuración)
 
 ## ¿Para quién es?
 
@@ -57,6 +57,24 @@ Si querés asistencia con IA, probá **[librarian](https://github.com/Agents4Lif
 ## Contribuir
 
 Este proyecto está en etapas tempranas. ¡Contribuciones, sugerencias y traducciones son bienvenidas!
+
+## Estado Actual
+
+Librarian actualmente es:
+- review-driven — todos los cambios requieren aprobación humana vía CLI
+- manualmente disparado — sin procesos automáticos ni en background
+- proposal-based — las mutaciones pasan por un ciclo de proponer → revisar → aprobar → aplicar
+- software alpha experimental
+
+## Dirección Futura
+
+Capacidades planificadas:
+- indexación incremental
+- filesystem watchers
+- loops de mantenimiento autónomo
+- sistemas de recovery y reconciliación
+
+Ninguna de estas está implementada todavía. La documentación describe el comportamiento actual salvo que se marque explícitamente como planificado.
 
 ## Licencia
 

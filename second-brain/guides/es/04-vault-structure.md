@@ -74,7 +74,7 @@ La relación entre carpetas:
 | `inbox/` | Captura humana temporal | Vos |
 | `raw/` | Fuentes aprobadas para que Librarian lea | Vos (consentimiento explícito) |
 | `wiki/` | Conocimiento ya estructurado | Librarian |
-| `reviews/` | Propuestas antes de tocar la wiki | Librarian (vos aprobás) |
+| `reviews/` | Superficie humana de revisión y export | Librarian (vos aprobás vía CLI) |
 | `reports/` | Diagnósticos del vault | Librarian |
 | `memory/` | Continuidad del agente entre sesiones | Librarian |
 | `configs/` | Reglas explícitas de configuración | Vos |
@@ -94,7 +94,7 @@ wiki/
   synthesis/
 ```
 
-`reviews/` es una superficie humana de revisión/export. La fuente de verdad de propuestas es `.librarian/proposals/`. Antes de modificar la wiki, Librarian genera propuestas que revisás, aprobás y aplicás vía CLI. La wiki solo se modifica vía approve/apply. Así mantenés control total sobre tu conocimiento.
+`reviews/` es una superficie humana de revisión y export. `.librarian/proposals/` es la fuente de verdad interna de propuestas. Antes de modificar la wiki, Librarian genera propuestas que revisás, aprobás y aplicás vía CLI. La wiki solo se modifica vía approve/apply. Así mantenés control total sobre tu conocimiento.
 
 ## La Nota Home
 
