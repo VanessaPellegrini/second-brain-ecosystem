@@ -26,7 +26,7 @@ Implement transaction-like apply with:
 
 ### State Machine
 
-```
+```text
 pending ──→ applying ──→ applied
    ↑            │
    │            ↓
