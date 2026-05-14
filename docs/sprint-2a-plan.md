@@ -49,7 +49,7 @@ Answers: **"What happened operationally with this proposal?"**
 
 ## Execution Order
 
-```
+```text
 1. Proposal state model + operationId
 2. Transaction-like apply + rollback
 3. Proposal inspection/recovery CLI
@@ -66,7 +66,7 @@ Items 1-2 are foundational. Items 3-6 depend on them.
 
 ### State Machine
 
-```
+```text
 pending ──→ applying ──→ applied
    ↑            │
    │            ↓
@@ -137,7 +137,7 @@ The apply operation is the most critical mutation in the system. It must be:
 
 ### Apply Flow
 
-```
+```text
 1. Load proposal from .librarian/proposals/<id>/metadata.json
 2. Validate state is in {pending, failed, rolled_back}
 3. Generate operationId: op_<ulid>
@@ -156,7 +156,7 @@ The apply operation is the most critical mutation in the system. It must be:
 
 ### Failure Flow
 
-```
+```text
 1. Capture error
 2. Record error in transaction (with stack/cause summary)
 3. For each already-written target:
@@ -230,7 +230,7 @@ librarian proposal <id>
 
 Output:
 
-```
+```text
 Proposal: prop_abc123
 State:    failed
 Created:  2026-05-13T10:00:00Z
@@ -337,7 +337,7 @@ Check runs when a command needs the index or when TUI starts. Not continuous.
 
 ### Rebuild Flow
 
-```
+```text
 1. Set status → rebuilding
 2. Walk wiki/ and raw/ directories
 3. For each file: record mtime, size, hash
@@ -450,7 +450,7 @@ TUI must be a surface of the real runtime, not a separate chatbot.
 
 Extract a shared `runtime-context.ts` if CLI and TUI currently duplicate logic:
 
-```
+```text
 src/
   runtime/
     runtime-context.ts      ← shared entry point
