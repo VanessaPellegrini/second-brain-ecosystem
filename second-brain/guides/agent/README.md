@@ -25,12 +25,13 @@ Read these files in order before making any changes:
 
 ```
 vault/
-├── 1-projects/
-├── 2-areas/
-├── 3-resources/
-├── 4-archive/
-├── daily/
-├── inbox/
+├── raw/
+│   ├── 1-proyectos/
+│   ├── 2-areas/
+│   ├── 3-recursos/
+│   ├── 4-archivo/
+│   ├── daily/
+│   └── inbox/
 ├── templates/
 └── home.md
 ```
@@ -40,6 +41,12 @@ If the user wants Librarian compatibility, also create the AI operational layer:
 ```
 vault/
 ├── raw/
+│   ├── 1-proyectos/
+│   ├── 2-areas/
+│   ├── 3-recursos/
+│   ├── 4-archivo/
+│   ├── daily/
+│   └── inbox/
 ├── wiki/
 │   ├── conceptos/
 │   ├── entidades/
@@ -51,13 +58,20 @@ vault/
 ├── reviews/
 ├── memory/
 ├── configs/
-└── .librarian/
+├── templates/
+├── .librarian/
+└── home.md
 ```
 
 | Folder | Role | Who writes |
 |--------|------|------------|
-| `inbox/` | Temporary human capture | User |
-| `raw/` | Curated sources for Librarian to process | User (explicit consent) |
+| `raw/` | All user content: PARA organization, daily notes, inbox, and sources for Librarian | User |
+| `raw/1-proyectos/` | PARA: active projects | User |
+| `raw/2-areas/` | PARA: areas of responsibility | User |
+| `raw/3-recursos/` | PARA: reference resources | User |
+| `raw/4-archivo/` | PARA: archived items | User |
+| `raw/daily/` | Daily notes | User |
+| `raw/inbox/` | Temporary human capture | User |
 | `wiki/` | Structured knowledge maintained by AI | Librarian |
 | `reviews/` | Human-readable review and export surface | Librarian (user approves via CLI) |
 | `reports/` | Vault diagnostics | Librarian |
@@ -81,7 +95,7 @@ PARA organizes the user's life and projects. Librarian organizes the AI-processa
 
 Enable and configure these core plugins (no community plugins — user installs those manually):
 
-- **Daily notes** → new file location: `daily`, date format: `YYYY-MM-DD`, template: `templates/daily-template`
+- **Daily notes** → new file location: `raw/daily`, date format: `YYYY-MM-DD`, template: `templates/daily-template`
 - **Templates** → template folder: `templates`
 - **Slash commands**
 - **Outgoing links**
@@ -112,7 +126,7 @@ After setup, print a summary:
 ```
 ✅ Second Brain scaffolded successfully
 
-Folders: 1-projects, 2-areas, 3-resources, 4-archive, daily, inbox, templates
+Folders: 1-proyectos, 2-areas, 3-recursos, 4-archivo, daily, inbox, templates
 Librarian layer: not created unless requested
 Templates: daily-template, weekly-review, source-template
 Home note: home.md (pinned)

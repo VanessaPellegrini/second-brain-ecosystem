@@ -19,14 +19,17 @@ The most popular organizing system for a Second Brain is **PARA**, created by Ti
 
 ```mermaid
 graph TD
-    Vault[📁 your-vault] --> P[📁 1-projects]
-    Vault --> A[📁 2-areas]
-    Vault --> R[📁 3-resources]
-    Vault --> Arc[📁 4-archive]
-    Vault --> D[📁 daily]
+    Vault[📁 your-vault] --> Raw[📁 raw]
     Vault --> T[📁 templates]
     Vault --> H[📄 home.md]
-    Vault -. optional .-> AI[📁 Librarian Layer<br/>raw · wiki · reports · reviews · memory · configs · .librarian]
+    Vault -. optional .-> AI[📁 Librarian Layer<br/>wiki · reports · reviews · memory · configs · .librarian]
+
+    Raw --> P[📁 1-proyectos]
+    Raw --> A[📁 2-areas]
+    Raw --> R[📁 3-recursos]
+    Raw --> Arc[📁 4-archivo]
+    Raw --> D[📁 daily]
+    Raw --> Inb[📁 inbox]
 
     P --> P1[launch-portfolio.md]
     P --> P2[📁 thesis-2026]
@@ -49,16 +52,16 @@ This layer is optional. Your Second Brain works without it. If you plan to use L
 
 ```text
 vault/
-  1-projects/
-  2-areas/
-  3-resources/
-  4-archive/
-  daily/
-  inbox/
+  raw/              # everything lives under raw/
+    1-proyectos/
+    2-areas/
+    3-recursos/
+    4-archivo/
+    daily/
+    inbox/
   templates/
   home.md
 
-  raw/          # immutable sources approved for AI
   wiki/         # structured knowledge generated/curated by Librarian
   reports/      # automatic vault diagnostics
   reviews/      # proposals pending approval/rejection/editing
@@ -71,8 +74,12 @@ The relationship between folders:
 
 | Folder | Role | Who writes |
 |--------|------|------------|
-| `inbox/` | Temporary human capture | You |
-| `raw/` | Sources approved for Librarian to read | You (explicit consent) |
+| `raw/inbox/` | Temporary human capture | You |
+| `raw/1-proyectos/` | Active things with a deadline or goal | You |
+| `raw/2-areas/` | Ongoing responsibilities with no end date | You |
+| `raw/3-recursos/` | Topics you're interested in | You |
+| `raw/4-archivo/` | Completed projects and inactive items | You |
+| `raw/daily/` | Daily notes | You |
 | `wiki/` | Structured knowledge | Librarian |
 | `reviews/` | Human-readable review and export surface | Librarian (you approve via CLI) |
 | `reports/` | Vault diagnostics | Librarian |
@@ -80,7 +87,7 @@ The relationship between folders:
 | `configs/` | Explicit configuration rules | You |
 | `.librarian/` | Internal technical state | Librarian |
 
-Use `inbox/` for fast human capture. Move a source into `raw/` only when you want Librarian to process it. This separation acts as a consent boundary: not everything you capture automatically enters the AI layer.
+Use `raw/inbox/` for fast human capture. Move a source into the appropriate PARA folder under `raw/` (e.g., `raw/3-recursos/`) only when you want Librarian to process it. This separation acts as a consent boundary: not everything you capture automatically enters the AI layer.
 
 Inside `wiki/`, Librarian expects this structure:
 
@@ -131,14 +138,15 @@ Good naming makes everything searchable:
 
 ## When in Doubt: Inbox
 
-Not sure where a note goes? Create an `inbox/` folder. Dump things there and sort later during a weekly review.
+Not sure where a note goes? Create an `raw/inbox/` folder. Dump things there and sort later during a weekly review.
 
 ```
 📁 your-vault/
-├── 📁 inbox/             ← Unsorted notes (sort weekly)
-├── 📁 1-projects/
-├── 📁 2-areas/
-...
+├── 📁 raw/
+│   ├── 📁 inbox/             ← Unsorted notes (sort weekly)
+│   ├── 📁 1-proyectos/
+│   ├── 📁 2-areas/
+│   ...
 ```
 
 > The inbox is not a trash can. Clean it out weekly. If a note sits there for a month, archive it or delete it.

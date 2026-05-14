@@ -19,14 +19,17 @@ El sistema de organización más popular para un Segundo Cerebro es **PARA**, cr
 
 ```mermaid
 graph TD
-    Vault[📁 tu-vault] --> P[📁 1-proyectos]
-    Vault --> A[📁 2-areas]
-    Vault --> R[📁 3-recursos]
-    Vault --> Arc[📁 4-archivo]
-    Vault --> D[📁 daily]
-    Vault --> T[📁 templates]
+    Vault[📁 tu-vault] --> T[📁 templates]
     Vault --> H[📄 home.md]
-    Vault -. opcional .-> AI[📁 Capa Librarian<br/>raw · wiki · reports · reviews · memory · configs · .librarian]
+    Vault --> Raw[📁 raw]
+    Vault -. opcional .-> AI[📁 Capa Librarian<br/>wiki · reports · reviews · memory · configs · .librarian]
+
+    Raw --> P[📁 1-proyectos]
+    Raw --> A[📁 2-areas]
+    Raw --> R[📁 3-recursos]
+    Raw --> Arc[📁 4-archivo]
+    Raw --> D[📁 daily]
+    Raw --> In[📁 inbox]
 
     P --> P1[lanzamiento-portfolio.md]
     P --> P2[📁 tesis-2026]
@@ -49,16 +52,17 @@ Esta capa es opcional. Tu Segundo Cerebro funciona sin ella. Si vas a usar Libra
 
 ```text
 vault/
-  1-proyectos/
-  2-areas/
-  3-recursos/
-  4-archivo/
-  daily/
-  inbox/
   templates/
   home.md
 
-  raw/          # fuentes inmutables aprobadas para IA
+  raw/                # fuentes inmutables aprobadas para IA
+    1-proyectos/
+    2-areas/
+    3-recursos/
+    4-archivo/
+    daily/
+    inbox/
+
   wiki/         # conocimiento estructurado generado/curado por Librarian
   reports/      # diagnósticos automáticos del vault
   reviews/      # propuestas pendientes de aprobar/rechazar/editar
@@ -71,7 +75,7 @@ La relación entre carpetas:
 
 | Carpeta | Rol | Quién escribe |
 |---------|-----|---------------|
-| `inbox/` | Captura humana temporal | Vos |
+| `raw/inbox/` | Captura humana temporal | Vos |
 | `raw/` | Fuentes aprobadas para que Librarian lea | Vos (consentimiento explícito) |
 | `wiki/` | Conocimiento ya estructurado | Librarian |
 | `reviews/` | Superficie humana de revisión y export | Librarian (vos aprobás vía CLI) |
@@ -80,7 +84,7 @@ La relación entre carpetas:
 | `configs/` | Reglas explícitas de configuración | Vos |
 | `.librarian/` | Estado técnico interno | Librarian |
 
-Usá `inbox/` para captura humana rápida. Mové a `raw/` solo las fuentes que querés que Librarian procese. Esa separación funciona como una frontera de consentimiento: no todo lo que capturás entra automáticamente a la capa de IA.
+Usá `raw/inbox/` para captura humana rápida. Mové dentro de `raw/` solo las fuentes que querés que Librarian procese. Esa separación funciona como una frontera de consentimiento: no todo lo que capturás entra automáticamente a la capa de IA.
 
 Dentro de `wiki/`, Librarian espera esta estructura:
 
@@ -131,15 +135,16 @@ Un buen naming hace todo searchable:
 
 ## Cuando no sepas: Inbox
 
-¿No estás segura dónde va una nota? Creá una carpeta `inbox/`. Tirá cosas ahí y ordenalas después en la revisión semanal.
+¿No estás segura dónde va una nota? Creá una carpeta `raw/inbox/`. Tirá cosas ahí y ordenalas después en la revisión semanal.
 
 ```mermaid
 graph TD
-    Vault[📁 tu-vault] --> In[📁 inbox]
-    Vault --> P[📁 1-proyectos]
-    Vault --> A[📁 2-areas]
-    Vault --> R[📁 3-recursos]
-    Vault --> Arc[📁 4-archivo]
+    Vault[📁 tu-vault] --> Raw[📁 raw]
+    Raw --> In[📁 inbox]
+    Raw --> P[📁 1-proyectos]
+    Raw --> A[📁 2-areas]
+    Raw --> R[📁 3-recursos]
+    Raw --> Arc[📁 4-archivo]
 ```
 
 > El inbox no es un tacho. Limpiálo semanalmente. Si una nota pasa un mes ahí, archivala o borrala.
