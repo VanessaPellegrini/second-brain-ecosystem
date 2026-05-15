@@ -44,6 +44,24 @@ graph TD
 
 > 💡 The numbers (1-, 2-, 3-, 4-) keep folders in priority order in the file explorer.
 
+## Base Structure (without AI)
+
+If you are not using Librarian, your vault looks like this:
+
+```text
+vault/
+  1-projects/
+  2-areas/
+  3-resources/
+  4-archive/
+  daily/
+  inbox/
+  templates/
+  home.md
+```
+
+This is all you need for a fully functional Second Brain with PARA. No AI dependency or additional tools required.
+
 ## Optional AI Operational Layer: Librarian
 
 **PARA organizes your life and projects. Librarian organizes the AI-processable knowledge layer.**

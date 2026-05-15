@@ -44,6 +44,24 @@ graph TD
 
 > 💡 Los números (1-, 2-, 3-, 4-) mantienen las carpetas en orden de prioridad en el explorador de archivos.
 
+## Estructura Base (sin IA)
+
+Si no vas a usar Librarian, tu vault se ve así:
+
+```text
+vault/
+  1-proyectos/
+  2-areas/
+  3-recursos/
+  4-archivo/
+  daily/
+  inbox/
+  templates/
+  home.md
+```
+
+Esto es todo lo que necesitás para un Second Brain funcional con PARA. No hay dependencia de IA ni herramientas adicionales.
+
 ## Capa Operativa de IA Opcional: Librarian
 
 **PARA organiza tu vida y tus proyectos. Librarian organiza la capa de conocimiento procesable por IA.**
