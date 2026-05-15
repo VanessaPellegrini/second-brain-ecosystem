@@ -19,14 +19,17 @@ El sistema de organización más popular para un Segundo Cerebro es **PARA**, cr
 
 ```mermaid
 graph TD
-    Vault[📁 tu-vault] --> P[📁 1-proyectos]
-    Vault --> A[📁 2-areas]
-    Vault --> R[📁 3-recursos]
-    Vault --> Arc[📁 4-archivo]
-    Vault --> D[📁 daily]
+    Vault[📁 tu-vault] --> Raw[📁 raw]
     Vault --> T[📁 templates]
     Vault --> H[📄 home.md]
-    Vault -. opcional .-> AI[📁 Capa Librarian<br/>raw · wiki · reports · reviews · memory · configs · .librarian]
+    Vault -. opcional .-> AI[📁 Capa Librarian<br/>wiki · reports · reviews · memory · configs · .librarian]
+
+    Raw --> P[📁 1-proyectos]
+    Raw --> A[📁 2-areas]
+    Raw --> R[📁 3-recursos]
+    Raw --> Arc[📁 4-archivo]
+    Raw --> D[📁 daily]
+    Raw --> In[📁 inbox]
 
     P --> P1[lanzamiento-portfolio.md]
     P --> P2[📁 tesis-2026]
@@ -45,34 +48,33 @@ graph TD
 
 **PARA organiza tu vida y tus proyectos. Librarian organiza la capa de conocimiento procesable por IA.**
 
-Esta capa es opcional. Tu Segundo Cerebro funciona sin ella. Si vas a usar Librarian, agrega estas carpetas al nivel raíz del vault. No reemplazan PARA: viven al lado.
+Esta capa es opcional. Tu Segundo Cerebro funciona sin ella. Si vas a usar Librarian, la estructura completa del vault se ve así:
 
 ```text
 vault/
-  1-proyectos/
-  2-areas/
-  3-recursos/
-  4-archivo/
-  daily/
-  inbox/
+  raw/            # carpetas PARA + fuentes inmutables aprobadas para IA
+    1-proyectos/
+    2-areas/
+    3-recursos/
+    4-archivo/
+    daily/
+    inbox/
+  wiki/           # conocimiento estructurado generado/curado por Librarian
+  reports/        # diagnósticos automáticos del vault
+  reviews/        # propuestas pendientes de aprobar/rechazar/editar
+  memory/         # memoria persistente del agente/sesiones
+  configs/        # configuración visible/editable de Librarian
   templates/
+  .librarian/     # estado interno, índices, cache, locks
   home.md
-
-  raw/          # fuentes inmutables aprobadas para IA
-  wiki/         # conocimiento estructurado generado/curado por Librarian
-  reports/      # diagnósticos automáticos del vault
-  reviews/      # propuestas pendientes de aprobar/rechazar/editar
-  memory/       # memoria persistente del agente/sesiones
-  configs/      # configuración visible/editable de Librarian
-  .librarian/   # estado interno, índices, cache, locks
 ```
 
 La relación entre carpetas:
 
 | Carpeta | Rol | Quién escribe |
 |---------|-----|---------------|
-| `inbox/` | Captura humana temporal | Vos |
-| `raw/` | Fuentes aprobadas para que Librarian lea | Vos (consentimiento explícito) |
+| `raw/inbox/` | Captura humana temporal | Vos |
+| `raw/` | Fuentes aprobadas para que Librarian lea (incluye carpetas PARA) | Vos (consentimiento explícito) |
 | `wiki/` | Conocimiento ya estructurado | Librarian |
 | `reviews/` | Superficie humana de revisión y export | Librarian (vos aprobás vía CLI) |
 | `reports/` | Diagnósticos del vault | Librarian |
@@ -80,7 +82,7 @@ La relación entre carpetas:
 | `configs/` | Reglas explícitas de configuración | Vos |
 | `.librarian/` | Estado técnico interno | Librarian |
 
-Usá `inbox/` para captura humana rápida. Mové a `raw/` solo las fuentes que querés que Librarian procese. Esa separación funciona como una frontera de consentimiento: no todo lo que capturás entra automáticamente a la capa de IA.
+Usá `raw/inbox/` para captura humana rápida. Las carpetas PARA (`1-proyectos`, `2-areas`, etc.), `daily/` e `inbox/` viven todas dentro de `raw/`. Mové a `raw/` solo las fuentes que querés que Librarian procese. Esa separación funciona como una frontera de consentimiento: no todo lo que capturás entra automáticamente a la capa de IA.
 
 Dentro de `wiki/`, Librarian espera esta estructura:
 
@@ -131,15 +133,16 @@ Un buen naming hace todo searchable:
 
 ## Cuando no sepas: Inbox
 
-¿No estás segura dónde va una nota? Creá una carpeta `inbox/`. Tirá cosas ahí y ordenalas después en la revisión semanal.
+¿No estás segura dónde va una nota? Creá una carpeta `inbox/` dentro de `raw/`. Tirá cosas ahí y ordenalas después en la revisión semanal.
 
 ```mermaid
 graph TD
-    Vault[📁 tu-vault] --> In[📁 inbox]
-    Vault --> P[📁 1-proyectos]
-    Vault --> A[📁 2-areas]
-    Vault --> R[📁 3-recursos]
-    Vault --> Arc[📁 4-archivo]
+    Vault[📁 tu-vault] --> Raw[📁 raw]
+    Raw --> In[📁 inbox]
+    Raw --> P[📁 1-proyectos]
+    Raw --> A[📁 2-areas]
+    Raw --> R[📁 3-recursos]
+    Raw --> Arc[📁 4-archivo]
 ```
 
 > El inbox no es un tacho. Limpiálo semanalmente. Si una nota pasa un mes ahí, archivala o borrala.

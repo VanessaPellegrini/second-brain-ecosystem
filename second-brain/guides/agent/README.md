@@ -25,12 +25,13 @@ Read these files in order before making any changes:
 
 ```
 vault/
-├── 1-projects/
-├── 2-areas/
-├── 3-resources/
-├── 4-archive/
-├── daily/
-├── inbox/
+├── raw/
+│   ├── 1-projects/
+│   ├── 2-areas/
+│   ├── 3-resources/
+│   ├── 4-archive/
+│   ├── daily/
+│   └── inbox/
 ├── templates/
 └── home.md
 ```
@@ -40,6 +41,12 @@ If the user wants Librarian compatibility, also create the AI operational layer:
 ```
 vault/
 ├── raw/
+│   ├── 1-projects/
+│   ├── 2-areas/
+│   ├── 3-resources/
+│   ├── 4-archive/
+│   ├── daily/
+│   └── inbox/
 ├── wiki/
 │   ├── conceptos/
 │   ├── entidades/
@@ -51,13 +58,15 @@ vault/
 ├── reviews/
 ├── memory/
 ├── configs/
-└── .librarian/
+├── templates/
+├── .librarian/
+└── home.md
 ```
 
 | Folder | Role | Who writes |
 |--------|------|------------|
-| `inbox/` | Temporary human capture | User |
-| `raw/` | Curated sources for Librarian to process | User (explicit consent) |
+| `raw/inbox/` | Temporary human capture | User |
+| `raw/` | Curated sources for Librarian to process (includes PARA folders) | User (explicit consent) |
 | `wiki/` | Structured knowledge maintained by AI | Librarian |
 | `reviews/` | Human-readable review and export surface | Librarian (user approves via CLI) |
 | `reports/` | Vault diagnostics | Librarian |
@@ -65,7 +74,7 @@ vault/
 | `configs/` | Explicit configuration rules | User |
 | `.librarian/` | Internal state: indexes, proposals, cache, locks | Librarian |
 
-PARA organizes the user's life and projects. Librarian organizes the AI-processable knowledge layer. They live alongside each other.
+PARA organizes the user's life and projects. Librarian organizes the AI-processable knowledge layer. PARA folders live inside `raw/` alongside `inbox/` and `daily/`, while Librarian's folders (`wiki/`, `reports/`, etc.) live at vault root.
 
 ### 2. Create Templates
 
@@ -92,7 +101,7 @@ Create `home.md` as the vault dashboard with links to active projects, quick lin
 
 ### 5. Create Inbox
 
-Create `inbox/` folder with a `_README.md` explaining it's for unsorted notes to be processed during weekly reviews.
+Create `raw/inbox/` folder with a `_README.md` explaining it's for unsorted notes to be processed during weekly reviews.
 
 ## Rules
 
@@ -112,7 +121,7 @@ After setup, print a summary:
 ```
 ✅ Second Brain scaffolded successfully
 
-Folders: 1-projects, 2-areas, 3-resources, 4-archive, daily, inbox, templates
+Folders: raw/1-projects, raw/2-areas, raw/3-resources, raw/4-archive, raw/daily, raw/inbox, templates
 Librarian layer: not created unless requested
 Templates: daily-template, weekly-review, source-template
 Home note: home.md (pinned)

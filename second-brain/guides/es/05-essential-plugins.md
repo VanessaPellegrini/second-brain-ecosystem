@@ -42,7 +42,7 @@ Potencia tus checkboxes con fechas de vencimiento, recurrencia, prioridades y fi
 Consultá tu vault como una base de datos. Creá listas, tablas y vistas dinámicas.
 
 ```dataview
-TASK FROM "1-proyectos"
+TASK FROM "raw/1-proyectos"
 WHERE !completed
 SORT due ASC
 ```

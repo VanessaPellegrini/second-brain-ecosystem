@@ -19,14 +19,17 @@ The most popular organizing system for a Second Brain is **PARA**, created by Ti
 
 ```mermaid
 graph TD
-    Vault[📁 your-vault] --> P[📁 1-projects]
-    Vault --> A[📁 2-areas]
-    Vault --> R[📁 3-resources]
-    Vault --> Arc[📁 4-archive]
-    Vault --> D[📁 daily]
+    Vault[📁 your-vault] --> Raw[📁 raw]
     Vault --> T[📁 templates]
     Vault --> H[📄 home.md]
-    Vault -. optional .-> AI[📁 Librarian Layer<br/>raw · wiki · reports · reviews · memory · configs · .librarian]
+    Vault -. optional .-> AI[📁 Librarian Layer<br/>wiki · reports · reviews · memory · configs · .librarian]
+
+    Raw --> P[📁 1-projects]
+    Raw --> A[📁 2-areas]
+    Raw --> R[📁 3-resources]
+    Raw --> Arc[📁 4-archive]
+    Raw --> D[📁 daily]
+    Raw --> In[📁 inbox]
 
     P --> P1[launch-portfolio.md]
     P --> P2[📁 thesis-2026]
@@ -45,34 +48,33 @@ graph TD
 
 **PARA organizes your life and projects. Librarian organizes the AI-processable knowledge layer.**
 
-This layer is optional. Your Second Brain works without it. If you plan to use Librarian, add these folders at the vault root. They do not replace PARA: they live alongside it.
+This layer is optional. Your Second Brain works without it. If you plan to use Librarian, the full vault structure looks like this:
 
 ```text
 vault/
-  1-projects/
-  2-areas/
-  3-resources/
-  4-archive/
-  daily/
-  inbox/
+  raw/            # PARA folders + immutable sources approved for AI
+    1-projects/
+    2-areas/
+    3-resources/
+    4-archive/
+    daily/
+    inbox/
+  wiki/           # structured knowledge generated/curated by Librarian
+  reports/        # automatic vault diagnostics
+  reviews/        # proposals pending approval/rejection/editing
+  memory/         # persistent agent/session memory
+  configs/        # visible/editable Librarian configuration
   templates/
+  .librarian/     # internal state, indexes, cache, locks
   home.md
-
-  raw/          # immutable sources approved for AI
-  wiki/         # structured knowledge generated/curated by Librarian
-  reports/      # automatic vault diagnostics
-  reviews/      # proposals pending approval/rejection/editing
-  memory/       # persistent agent/session memory
-  configs/      # visible/editable Librarian configuration
-  .librarian/   # internal state, indexes, cache, locks
 ```
 
 The relationship between folders:
 
 | Folder | Role | Who writes |
 |--------|------|------------|
-| `inbox/` | Temporary human capture | You |
-| `raw/` | Sources approved for Librarian to read | You (explicit consent) |
+| `raw/inbox/` | Temporary human capture | You |
+| `raw/` | Sources approved for Librarian to read (includes PARA folders) | You (explicit consent) |
 | `wiki/` | Structured knowledge | Librarian |
 | `reviews/` | Human-readable review and export surface | Librarian (you approve via CLI) |
 | `reports/` | Vault diagnostics | Librarian |
@@ -80,7 +82,7 @@ The relationship between folders:
 | `configs/` | Explicit configuration rules | You |
 | `.librarian/` | Internal technical state | Librarian |
 
-Use `inbox/` for fast human capture. Move a source into `raw/` only when you want Librarian to process it. This separation acts as a consent boundary: not everything you capture automatically enters the AI layer.
+Use `raw/inbox/` for fast human capture. The PARA folders (`1-projects`, `2-areas`, etc.), `daily/`, and `inbox/` all live inside `raw/`. Move a source into `raw/` only when you want Librarian to process it. This separation acts as a consent boundary: not everything you capture automatically enters the AI layer.
 
 Inside `wiki/`, Librarian expects this structure:
 
@@ -131,14 +133,17 @@ Good naming makes everything searchable:
 
 ## When in Doubt: Inbox
 
-Not sure where a note goes? Create an `inbox/` folder. Dump things there and sort later during a weekly review.
+Not sure where a note goes? Create an `inbox/` folder inside `raw/`. Dump things there and sort later during a weekly review.
 
 ```
 📁 your-vault/
-├── 📁 inbox/             ← Unsorted notes (sort weekly)
-├── 📁 1-projects/
-├── 📁 2-areas/
-...
+├── 📁 raw/
+│   ├── 📁 inbox/         ← Unsorted notes (sort weekly)
+│   ├── 📁 1-projects/
+│   ├── 📁 2-areas/
+│   ...
+├── 📁 templates/
+└── 📄 home.md
 ```
 
 > The inbox is not a trash can. Clean it out weekly. If a note sits there for a month, archive it or delete it.
