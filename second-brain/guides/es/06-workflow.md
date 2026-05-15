@@ -49,6 +49,8 @@ flowchart TD
     Q -->|Ya no| Arc[📁 4-archivo]
 ```
 
+> 💡 Las carpetas PARA (`1-proyectos`, `2-areas`, etc.), `daily/` e `inbox/` viven todas dentro de `raw/`.
+
 **Cuándo organizar:** Durante tu revisión semanal (la configuramos abajo).
 
 ### 3. 🔍 Destilar — Extraé la Esencia

@@ -49,6 +49,8 @@ flowchart TD
     Q -->|Not anymore| Arc[📁 4-archive]
 ```
 
+> 💡 The PARA folders (`1-projects`, `2-areas`, etc.), `daily/`, and `inbox/` all live inside `raw/`.
+
 **When to organize:** During your weekly review (we'll set that up below).
 
 ### 3. 🔍 Distill — Extract the Essence

@@ -19,9 +19,9 @@ El sistema de organización más popular para un Segundo Cerebro es **PARA**, cr
 
 ```mermaid
 graph TD
-    Vault[📁 tu-vault] --> T[📁 templates]
+    Vault[📁 tu-vault] --> Raw[📁 raw]
+    Vault --> T[📁 templates]
     Vault --> H[📄 home.md]
-    Vault --> Raw[📁 raw]
     Vault -. opcional .-> AI[📁 Capa Librarian<br/>wiki · reports · reviews · memory · configs · .librarian]
 
     Raw --> P[📁 1-proyectos]
@@ -48,27 +48,25 @@ graph TD
 
 **PARA organiza tu vida y tus proyectos. Librarian organiza la capa de conocimiento procesable por IA.**
 
-Esta capa es opcional. Tu Segundo Cerebro funciona sin ella. Si vas a usar Librarian, agrega estas carpetas al nivel raíz del vault. No reemplazan PARA: viven al lado.
+Esta capa es opcional. Tu Segundo Cerebro funciona sin ella. Si vas a usar Librarian, la estructura completa del vault se ve así:
 
 ```text
 vault/
-  templates/
-  home.md
-
-  raw/                # fuentes inmutables aprobadas para IA
+  raw/            # carpetas PARA + fuentes inmutables aprobadas para IA
     1-proyectos/
     2-areas/
     3-recursos/
     4-archivo/
     daily/
     inbox/
-
-  wiki/         # conocimiento estructurado generado/curado por Librarian
-  reports/      # diagnósticos automáticos del vault
-  reviews/      # propuestas pendientes de aprobar/rechazar/editar
-  memory/       # memoria persistente del agente/sesiones
-  configs/      # configuración visible/editable de Librarian
-  .librarian/   # estado interno, índices, cache, locks
+  wiki/           # conocimiento estructurado generado/curado por Librarian
+  reports/        # diagnósticos automáticos del vault
+  reviews/        # propuestas pendientes de aprobar/rechazar/editar
+  memory/         # memoria persistente del agente/sesiones
+  configs/        # configuración visible/editable de Librarian
+  templates/
+  .librarian/     # estado interno, índices, cache, locks
+  home.md
 ```
 
 La relación entre carpetas:
@@ -76,7 +74,7 @@ La relación entre carpetas:
 | Carpeta | Rol | Quién escribe |
 |---------|-----|---------------|
 | `raw/inbox/` | Captura humana temporal | Vos |
-| `raw/` | Fuentes aprobadas para que Librarian lea | Vos (consentimiento explícito) |
+| `raw/` | Fuentes aprobadas para que Librarian lea (incluye carpetas PARA) | Vos (consentimiento explícito) |
 | `wiki/` | Conocimiento ya estructurado | Librarian |
 | `reviews/` | Superficie humana de revisión y export | Librarian (vos aprobás vía CLI) |
 | `reports/` | Diagnósticos del vault | Librarian |
@@ -84,7 +82,7 @@ La relación entre carpetas:
 | `configs/` | Reglas explícitas de configuración | Vos |
 | `.librarian/` | Estado técnico interno | Librarian |
 
-Usá `raw/inbox/` para captura humana rápida. Mové dentro de `raw/` solo las fuentes que querés que Librarian procese. Esa separación funciona como una frontera de consentimiento: no todo lo que capturás entra automáticamente a la capa de IA.
+Usá `raw/inbox/` para captura humana rápida. Las carpetas PARA (`1-proyectos`, `2-areas`, etc.), `daily/` e `inbox/` viven todas dentro de `raw/`. Mové a `raw/` solo las fuentes que querés que Librarian procese. Esa separación funciona como una frontera de consentimiento: no todo lo que capturás entra automáticamente a la capa de IA.
 
 Dentro de `wiki/`, Librarian espera esta estructura:
 
@@ -135,7 +133,7 @@ Un buen naming hace todo searchable:
 
 ## Cuando no sepas: Inbox
 
-¿No estás segura dónde va una nota? Creá una carpeta `raw/inbox/`. Tirá cosas ahí y ordenalas después en la revisión semanal.
+¿No estás segura dónde va una nota? Creá una carpeta `inbox/` dentro de `raw/`. Tirá cosas ahí y ordenalas después en la revisión semanal.
 
 ```mermaid
 graph TD
